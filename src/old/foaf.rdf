@@ -1,0 +1,153 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/" >
+  <rdf:Description rdf:nodeID="A0">
+    <foaf:mbox_sha1sum>aaba282e490a50c6a9ccaf0317c0ca8fd23f7ca3</foaf:mbox_sha1sum>
+    <foaf:name>Yvette Park</foaf:name>
+    <foaf:firstName>Yvette</foaf:firstName>
+    <foaf:surname>Park</foaf:surname>
+    <foaf:homepage rdf:resource="http://yvette.twiddles.com/"/>
+    <rdfs:seeAlso rdf:resource="http://yvette.twiddles.com/foaf.rdf"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A1">
+    <foaf:mbox_sha1sum>30417e000942f4b7717b735afbd581ded717ee7d</foaf:mbox_sha1sum>
+    <foaf:firstName>Mike</foaf:firstName>
+    <foaf:surname>Abbott</foaf:surname>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A2">
+    <foaf:firstName>Moritz</foaf:firstName>
+    <foaf:surname>Tybus</foaf:surname>
+    <foaf:homepage rdf:resource="http://moritz.tybus.de/"/>
+    <foaf:mbox_sha1sum>c54caf310d544ff923cca894535c5efa2eab277f</foaf:mbox_sha1sum>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A3">
+    <foaf:name>James Nash</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:firstName>James</foaf:firstName>
+    <foaf:surname>Nash</foaf:surname>
+    <foaf:homepage rdf:resource="http://cirrus.twiddles.com/"/>
+    <foaf:schoolHomepage rdf:resource="http://www.dslondon.org.uk/"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.twiddles.com/"/>
+    <foaf:mbox_sha1sum>daa4c3cc578a304c8205a44e3cc907fc7e7bd9a9</foaf:mbox_sha1sum>
+    <foaf:knows rdf:nodeID="A4"/>
+    <foaf:mbox rdf:resource="mailto:cirrus@twiddles.com"/>
+    <foaf:knows rdf:nodeID="A5"/>
+    <foaf:knows rdf:nodeID="A0"/>
+    <foaf:knows rdf:nodeID="A6"/>
+    <foaf:currentProject rdf:nodeID="A7"/>
+    <foaf:currentProject rdf:nodeID="A8"/>
+    <foaf:nick>Cirrus</foaf:nick>
+    <foaf:mbox_sha1sum>8127033c72d1c8ce52d80bcc6d69bf4ef6fd0f95</foaf:mbox_sha1sum>
+    <foaf:nick>ahuck</foaf:nick>
+    <foaf:knows rdf:nodeID="A9"/>
+    <foaf:knows rdf:nodeID="A10"/>
+    <foaf:knows rdf:nodeID="A11"/>
+    <foaf:img rdf:resource="http://cirrus.twiddles.com/rdf-test/ahuck.jpg"/>
+    <foaf:knows rdf:nodeID="A1"/>
+    <foaf:knows rdf:nodeID="A12"/>
+    <foaf:knows rdf:nodeID="A13"/>
+    <foaf:knows rdf:nodeID="A2"/>
+    <foaf:knows rdf:nodeID="A14"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A8">
+    <dc:title>Adonthell</dc:title>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    <dc:description>Adonthell is an open-source role-playing game. Its style is similar to some of the old 16-bit classics such as the early Final Fantasy, Zelda and Secret of Mana games.</dc:description>
+    <foaf:homepage rdf:resource="http://adonthell.linuxgames.com/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A5">
+    <foaf:firstName>Ramsey</foaf:firstName>
+    <foaf:surname>Shrayh</foaf:surname>
+    <foaf:name>Ramsey Shrayh</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A10">
+    <foaf:firstName>Gene</foaf:firstName>
+    <foaf:surname>Kelly</foaf:surname>
+    <foaf:name>Gene Kelly</foaf:name>
+    <foaf:mbox_sha1sum>79f0da02927ff362e6853e8853d52312ebbce790</foaf:mbox_sha1sum>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cirrus.twiddles.com/rdf-test/couple.jpg">
+    <dc:title>Yvette and James at New Year's eve 2003/2004</dc:title>
+    <dc:description>Yvette and James celebrating the 2004 New Year at Nils's party</dc:description>
+    <foaf:depicts rdf:nodeID="A3"/>
+    <foaf:depicts rdf:nodeID="A0"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A13">
+    <foaf:firstName>Deniz</foaf:firstName>
+    <foaf:surname>Özsen</foaf:surname>
+    <foaf:homepage rdf:resource="http://www.cs.ucl.ac.uk/students/D.Ozsen/"/>
+    <foaf:img rdf:resource="http://www.cs.ucl.ac.uk/students/D.Ozsen/me.gif"/>
+    <foaf:mbox_sha1sum>a7ab3232c02d23687511ef29d2d3f86eab959c66</foaf:mbox_sha1sum>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A11">
+    <foaf:name>Anina Black</foaf:name>
+    <foaf:surname>Black</foaf:surname>
+    <foaf:firstName>Anina</foaf:firstName>
+    <foaf:mbox_sha1sum>c63cf4a2bbb4555c3e8001f32d5ebd9502cecc77</foaf:mbox_sha1sum>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cirrus.twiddles.com/rdf-test/ahuck.jpg">
+    <dc:title>James looking a bit weird! :P</dc:title>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A4">
+    <foaf:firstName>Nils</foaf:firstName>
+    <foaf:surname>Hesse</foaf:surname>
+    <foaf:name>Nils Hesse</foaf:name>
+    <foaf:mbox_sha1sum>c15076aa71103110a6d2edb8963b3ff55ed3103f</foaf:mbox_sha1sum>
+    <foaf:homepage rdf:resource="http://rnilz.twiddles.com/"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A7">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
+    <dc:title>Ganesha</dc:title>
+    <rdfs:seeAlso rdf:resource="http://event-horizon.kicks-ass.net/uni/ganesha/index.rdf"/>
+    <foaf:homepage rdf:resource="http://event-horizon.kicks-ass.net/uni/ganesha/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A9">
+    <foaf:firstName>Duncan</foaf:firstName>
+    <foaf:surname>Black</foaf:surname>
+    <foaf:name>Duncan Black</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A6">
+    <foaf:firstName>Alex</foaf:firstName>
+    <foaf:mbox_sha1sum>71d600d9a1e87e24f4bd0f75d70653bb6f4d1246</foaf:mbox_sha1sum>
+    <foaf:surname>Forrest</foaf:surname>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name>Alex Forrest</foaf:name>
+    <foaf:homepage rdf:resource="http://www.createmediauk.com/"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.urcommunity.co.uk/"/>
+    <rdfs:seeAlso rdf:resource="http://www.urcommunity.co.uk/index.rdf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://cirrus.twiddles.com/rdf-test/crazy_santa.jpg">
+    <dc:title>Pre-christmas party at Nils's place in 2002</dc:title>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Image"/>
+    <foaf:depicts rdf:nodeID="A5"/>
+    <foaf:depicts rdf:nodeID="A4"/>
+    <foaf:depicts rdf:nodeID="A9"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A12">
+    <foaf:surname>Cornish</foaf:surname>
+    <foaf:firstName>Tom</foaf:firstName>
+    <foaf:mbox_sha1sum>3a1b55e7982597b7a40438c316a673cedc54dd79</foaf:mbox_sha1sum>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="A14">
+    <foaf:firstName>Steffen</foaf:firstName>
+    <foaf:surname>Lindemann</foaf:surname>
+    <foaf:mbox_sha1sum>fd19e05bd65f4d7ef34590ad7b48b674f0e193bb</foaf:mbox_sha1sum>
+    <foaf:nick>freeze</foaf:nick>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+</rdf:RDF>

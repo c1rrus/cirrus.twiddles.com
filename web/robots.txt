@@ -1,0 +1,6 @@
+# James Nash's robots.txt file
+
+User-agent: *
+Disallow: /style/
+
+Sitemap: http://cirrus.twiddles.com/sitemap.xml

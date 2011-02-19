@@ -1,0 +1,120 @@
+
+li#mmbook {
+	display: block;
+	margin-left: 0;
+}
+
+li#mmbook a {
+	display: block;
+	min-width: 100px;
+	margin: 0;
+	padding: 130px 0 0 0;
+	background: url('mmbook.jpg') no-repeat 50% 0;
+	text-align: center;
+}
+
+ul.social {
+	list-style-type: none;	
+}
+
+ul.social li {
+	display: block;
+	width: 46%;
+	margin: 0 2% 1em 2%;
+	padding: 0;
+	float: left;
+	background: #434343 url('style/boxbg.jpg') no-repeat 50% 0;	
+}
+
+ul.social li a {
+	display: block;
+	min-height: 44px;
+	border: 1px solid #b6e4ff;
+	margin: 0;
+	padding: 5px 5px 5px 60px;
+}
+
+ul.social li a:visited {
+	border: 1px solid #ed7de4;
+}
+
+ul.social li a:hover, ul.social li a:active {
+	border: 1px solid #ffffff;
+}
+
+#linkedin {
+	display: block;
+	margin: 0.6em 0 0.6em 0;
+	padding: 28px 0 0 0;
+	text-align: center;
+	background: url('linkedin.jpg') no-repeat 50% 0;
+}
+
+#twitter {
+	background: url('twitter.jpg') no-repeat 2px 2px;	
+}
+
+#facebook {
+	background: url('facebook.jpg') no-repeat 2px 2px;	
+}
+
+#flickr {
+	background: url('flickr.jpg') no-repeat 2px 2px;	
+}
+
+#delicious {
+	background: url('delicious.jpg') no-repeat 2px 2px;	
+}
+
+#badges {
+	list-style-type: none;
+}
+
+#badges li {
+	clear: both;
+	display: block;
+	padding: 0;
+	margin: 0 10px 0 10px;
+	font-size: 0.8em;
+}
+
+a.small-button {
+	display: block;
+	float: left;
+	margin: 0 5px 10px 0;
+	width: 80px;
+	height: 15px;
+	border: 2px solid #434343;
+}
+
+a.small-button:hover, a.small-button:active {
+	border-color: #fff;
+}
+
+a.small-button span {
+	display: none;
+}
+
+#valid-xhtml {
+	background: url('xhtml.png') no-repeat top left;
+}
+
+#xfn {
+	background: url('xfn-btn.gif') no-repeat top left;
+}
+
+#foaf {
+	background: url('foaf.gif') no-repeat top left;
+}
+
+.geekcode {
+	text-align: left;
+	font-family: "Courier New", monospace;
+	font-size: 0.9em;
+	padding: 0;
+	margin: 0 10px 15px 10px;
+}
+
+.geekcode span {
+	white-space: nowrap;
+}

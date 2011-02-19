@@ -1,0 +1,115 @@
+
+ul.gallery {
+	list-style-type: none;
+	text-align: center;
+}
+
+ul.gallery li {
+	display: block;
+	float: left;
+	padding: 0;
+	margin: 1em;
+}
+
+ul.gallery a {
+	font-size: 0.8em;
+	display: block;
+	margin: 0;
+	padding: 0;
+	width: 176px;
+	height: 220px;
+}
+
+ul.gallery a img {
+	display: block;
+	margin: 0 0 4px 0;
+	padding: 2px;
+	border: 1px solid #b6e4ff;
+}
+
+ul.gallery a:visited img {
+	border: 1px solid #ed7de4;
+}
+
+ul.gallery a:hover img, ul.gallery a:active img {
+	border: 1px solid #ffffff;
+}
+
+ul.gallery img {
+	display: block;
+	border: none;
+	padding: 0;
+	margin: 0 0 5px 0;	
+}
+
+
+
+
+ul.galleries {
+	list-style-type: none;	
+}
+
+ul.galleries li {
+	display: block;
+	background: #434343 url('/style/boxbg.jpg') no-repeat 50% 0;	
+}
+
+#main-content ul.galleries li {	
+	width: 46%;
+	margin: 0 2% 1em 2%;
+	padding: 0;
+	float: left;
+}
+
+#secondary-content ul.galleries li {
+	margin: 1em;
+	padding: 0;
+}
+
+ul.galleries li a, ul.galleries li span {
+	display: block;
+	min-height: 44px;
+	border: 1px solid;
+	margin: 0;
+	padding: 5px 5px 5px 60px;
+}
+
+ul.galleries li a {
+	border-color: #b6e4ff;
+}
+
+ul.galleries li span {
+	border-color: #ffffff;
+}
+
+ul.galleries li a:visited {
+	border: 1px solid #ed7de4;
+}
+
+ul.galleries li a:hover, ul.social li a:active {
+	border: 1px solid #ffffff;
+}
+
+#adonthell {
+	background: url('adonthell.jpg') no-repeat 2px 2px;	
+}
+
+#logos {
+	background: url('logos.jpg') no-repeat 2px 2px;	
+}
+
+#misc {
+	background: url('misc.jpg') no-repeat 2px 2px;	
+}
+
+#mobbler {
+	background: url('mobbler.jpg') no-repeat 2px 2px;	
+}
+
+#nasher {
+	background: url('nasher.jpg') no-repeat 2px 2px;	
+}
+
+#twiddles {
+	background: url('twiddles.jpg') no-repeat 2px 2px;	
+}

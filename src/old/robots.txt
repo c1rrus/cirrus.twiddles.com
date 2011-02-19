@@ -1,0 +1,7 @@
+# Event-Horizon.kicks-ass.net's robots.txt file
+# disallowing a few pic dirs coz there's no decent html there
+
+User-agent: *
+Disallow: /gfx/
+
+Sitemap: /sitemap.xml
