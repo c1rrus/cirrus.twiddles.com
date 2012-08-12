@@ -59,7 +59,7 @@
     <dc:title>Adonthell</dc:title>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
     <dc:description>Adonthell is an open-source role-playing game. Its style is similar to some of the old 16-bit classics such as the early Final Fantasy, Zelda and Secret of Mana games.</dc:description>
-    <foaf:homepage rdf:resource="http://adonthell.linuxgames.com/"/>
+    <foaf:homepage rdf:resource="http://adonthell.nongnu.org/"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A5">
     <foaf:firstName>Ramsey</foaf:firstName>
@@ -111,8 +111,8 @@
   <rdf:Description rdf:nodeID="A7">
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Project"/>
     <dc:title>Ganesha</dc:title>
-    <rdfs:seeAlso rdf:resource="http://event-horizon.kicks-ass.net/uni/ganesha/index.rdf"/>
-    <foaf:homepage rdf:resource="http://event-horizon.kicks-ass.net/uni/ganesha/"/>
+    <rdfs:seeAlso rdf:resource="http://event-horizon.cyberfinity.net/uni/ganesha/index.rdf"/>
+    <foaf:homepage rdf:resource="http://event-horizon.cyberfinity.net/uni/ganesha/"/>
   </rdf:Description>
   <rdf:Description rdf:nodeID="A9">
     <foaf:firstName>Duncan</foaf:firstName>
@@ -126,9 +126,6 @@
     <foaf:surname>Forrest</foaf:surname>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <foaf:name>Alex Forrest</foaf:name>
-    <foaf:homepage rdf:resource="http://www.createmediauk.com/"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.urcommunity.co.uk/"/>
-    <rdfs:seeAlso rdf:resource="http://www.urcommunity.co.uk/index.rdf"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://cirrus.twiddles.com/rdf-test/crazy_santa.jpg">
     <dc:title>Pre-christmas party at Nils's place in 2002</dc:title>

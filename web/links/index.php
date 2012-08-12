@@ -11,7 +11,7 @@
 		<li><a href="http://www.twiddles.com/">Twiddles</a> - <q>Coming soon</q>, honest guv'!</li>
 		<li><a href="http://twiddles.spreadshirt.net/">The official Twiddles shop</a>!</li>
 		<li><a href="http://www.hyper-timer.com/">Hyper Timer</a> - the awesome countdown timer app by Twiddles.</li>
-		<li><a href="http://adonthell.linuxgames.com/">Adonthell</a>. A cool, open-source RPG adventure game.</li>
+		<li><a href="http://adonthell.nongnu.org/">Adonthell</a>. A cool, open-source RPG adventure game.</li>
 	</ul>	
 </div>	
 <?php
