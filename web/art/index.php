@@ -7,7 +7,7 @@
 	<div class="box">
 		<h2>Foreword</h2>
 		<p>Hello! My name's <a href="/"><strong>James Nash</strong></a> and one of my favourite past-times is making pictures. I do a fair bit doodling and drawing with pens and pencils but also enjoy making pictures using just the computer (mostly using <a href="http://www.gimp.org/">GIMP</a> and <a href="http://www.inkscape.org/">Inkscape</a>). Some of my favourite works actually use a combination of traditional and digital media.</p>
-		<p>I've put together a selection of artwork I've done below. I've used different sites to publish some of my work so in those cases I'll be linking to them rather than having a local copy on this site (So don't panic if a link suddenly drops you on <a href="http://www.flickr.com/">Flickr</a> or <a href="http://event-horizon.twiddles.com/">Event-Horizon</a>). <strong>I hope you enjoy the pictures!</strong></p>
+		<p>I've put together a selection of artwork I've done below. I've used different sites to publish some of my work so in those cases I'll be linking to them rather than having a local copy on this site (So don't panic if a link suddenly drops you on <a href="http://www.flickr.com/">Flickr</a> or <a href="http://event-horizon.cyberfinity.net/">Event-Horizon</a>). <strong>I hope you enjoy the pictures!</strong></p>
 	</div>
 	<div class="box">
 		<h2>Galleries</h2>

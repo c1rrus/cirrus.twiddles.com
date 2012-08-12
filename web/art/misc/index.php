@@ -16,7 +16,7 @@
 			<li><a href="http://www.flickr.com/photos/james_nash/1449685498/"><img src="nighttime.jpg" alt="Night time" /> <span>Night sky over some mountains. (Rendered in Bryce)</span></a></li>
 			<li><a href="http://www.flickr.com/photos/james_nash/sets/72157602334721942/"><img src="phone_doodles.jpg" alt="Various phone doodles" /> <span>Doodles drawn on a Sony Ericsson W960 phone</span></a></li>
 			<li><a href="http://c1rruscl0ud.deviantart.com/art/Robot-140831688"><img src="robot.jpg" alt="Robot" /> <span>Robot vehicle with big guns!</span></a></li>
-			<li><a href="http://event-horizon.twiddles.com/sites/arty/outposts/"><img src="urban_outpost.jpg" alt="Urban Outpost" /> <span>Ominous outpost tower. (Create from a collage of photos)</span></a></li>
+			<li><a href="http://event-horizon.cyberfinity.net/cargo_bay/bcp_outposts/"><img src="urban_outpost.jpg" alt="Urban Outpost" /> <span>Ominous outpost tower. (Create from a collage of photos)</span></a></li>
 			<li><a href="http://www.flickr.com/photos/james_nash/4380562518/"><img src="GNUvara.jpg" alt="Che GNUvara" /> <span>Che GNUvara design for Symbian's Software Freedom Fighters initiative.</span></a></li>
 		</ul>
 		<p class="break">If you like them please tell your friends, link back here, tweet it, facebook it etc. etc. Cheers!</p>
