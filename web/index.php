@@ -37,10 +37,11 @@
 <div id="secondary-content">
 	<div class="box">
 		<h2>James Nash's Work</h2>
-		<p>I have been doing mobile software development for over <?php print date('Y') - 2005; ?> years (yes, I really am a <em>phone geek</em>!). I therefore like to think I know a thing or two about mobile software, operating systems and the industry in general. However, <strong>unless clearly stated otherwise</strong>, everything I say and write on this site and elsewhere online is my own, <em>personal</em> oppinion and <strong>in no way represents the views of my employer</strong>!</p>
+		<p>I am a User Experience Architect for a large consultancy firm. That means it's my job to make our  mobile app UIs as intuitive and delightful as possible.</p>
+		<p>Prior to that, I was a mobile software developer for over 6 years (yes, I really am a <em>phone geek</em>!). I therefore like to think I know a thing or two about mobile software, operating systems and the industry in general. However, <strong>unless clearly stated otherwise</strong>, everything I say and write on this site and elsewhere online is my own, <em>personal</em> opinion and <strong>in no way represents the views of my employer</strong>!</p>
 		<p>For other professional networking, please check out my: <a href="http://www.linkedin.com/in/jamescnash" id="linkedin" rel="me">LinkedIn profile.</a> Please note that I usually only accept people as a new contact if I've actually met them in real life!</p>
 		<h3>Shameless book plug</h3>
-		<p>By the way, if you're into developing multimedia apps for Symbian you may find this book useful:</p>
+		<p>By the way, on the (increasingly unlikely) off chance that you're into developing multimedia apps for Symbian you may find this book useful:</p>
 		<ul>
 			<li id="mmbook"><a href="http://www.amazon.co.uk/Multimedia-Symbian-OS-Inside-Convergence/dp/0470695072/ref=sr_1_1?ie=UTF8&amp;s=books&amp;qid=1253820406&amp;sr=8-1">Multimedia on Symbian OS</a></li>
 		</ul>
