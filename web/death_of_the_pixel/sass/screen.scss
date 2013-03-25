@@ -1,0 +1,138 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+
+/*
+ * Basic styles
+ *
+ *
+ */
+
+
+body {
+	font-size: 12px;
+	font-family: Verdana, sans-serif;	
+}
+
+// text blocks
+p, blockquote {
+	margin: 0 0 1em 0;
+}
+
+// lists
+ul, ol, dl {
+	margin: 0 0 0.5em 0;
+}
+
+li, dd {
+	margin: 0 0 0.5em 2em;
+}
+
+dt {
+	margin: 0 0 0.5em 0;
+}
+
+// headings
+header {
+	color: #fff;
+
+	h1 {
+		text-align: center;
+		font-weight: bold;
+		font-size: 3em;
+	}
+
+	h2 {
+		text-align: center;
+		font-size: 1.5em;
+	}
+}
+
+
+h2 {
+	font-size: 2em;
+	font-weight: bold;
+	margin: 0 0 0.5em 0;
+}
+
+h3 {
+	font-size: 1.5em;
+	font-weight: bold;
+	margin: 0 0 0.5em 0;
+}
+
+hgroup {
+	h3 {
+		font-size: 1em;
+		font-weight: bold;
+	}
+}
+
+
+
+/*
+ * Page sections.
+ * Includes multi-image backgrounds and associated effects.
+ *
+ */
+
+@-webkit-keyframes cemetary_bg_scroll {
+	from {
+		background-position-x: 50%, 0px, 60%, 70%, 0px, 0px, 11%, 0;
+	}
+	to {
+		background-position-x: 50%, (462px * 6), 60%, 70%, (828px * 2), 1023px, 11%, 0; // mist.png width = 462
+	}
+}
+
+header {
+	height: 360px;
+	background-color: #56436e;
+	padding: 3em 0;
+	
+	background-image: url('../rip_pixel.png'), url('../mist.png'), url('../cemetary_middle.png'), url('../cemetary_background.png'), url('../clouds2.png'), url('../clouds.png'), url('../moon.png'), url('../sky.gif');
+	background-repeat: no-repeat, repeat-x, repeat-x, repeat-x, repeat-x, repeat-x, no-repeat, repeat-x;
+	background-position-x: 50%, 0px, 60%, 70%, 0px, 0px, 11%, 0;
+	background-position-y: bottom, bottom, bottom, bottom, top, top, 6%, top;
+
+	-webkit-animation: cemetary_bg_scroll 90s linear infinite;
+
+}
+
+#main {
+	padding: 3em 0 3em 0;
+	
+	background-image: url('../grass_top.png'), url('../grass_bottom.png'), url('../soil.png');
+	background-repeat: repeat-x, repeat-x, repeat;
+	background-position-y: top, bottom, top;
+	
+	
+	section, hgroup {
+		width: 80%;
+		margin: 0 auto 3em auto;
+		padding: 1em;
+		
+		border: 2px solid #000;
+		
+		background-color: #fff;
+	}
+}
+
+footer {
+	background-color: #448afc;
+	background-image: url('../oz.png'), url('../sky_oz.png');
+	background-repeat: no-repeat, repeat-x;
+	background-position-y: top, top;
+	background-position-x: 70%, 0;
+	
+	min-height: 200px;
+	padding: 1em 0 1em 0;
+	
+	p {
+		width: 80%;
+		margin: 0 auto 0 auto;
+	}
+}
