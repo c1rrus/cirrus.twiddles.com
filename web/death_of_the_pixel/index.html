@@ -6,8 +6,8 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<link rel="stylesheet" type="text/css" href="stylesheets/screen.css" />
 </head>
-<body>
-	<header>
+<body class="presentation">
+	<header class="slide current">
 		<hgroup>
 			<h1>The Death of the Pixel</h1>
 			<h2>by <a href="http://cirrus.twiddles.com/">James Nash</a></h2>
@@ -16,111 +16,113 @@
 	<div id="main">
 	
 		<section>
-			<p>Traditionally, graphical user interfaces have been designed and developed using widths, heights and coordinates measured in pixels. However, display technology advances in recent years require us to re-evaluate our relationship with the humble pixel. Equally, the ever-growing variety of screen sizes and shapes is forcing us out of our pixel comfort zone.</p>
-		<p><strong>The Death of the Pixel</strong> says farewell to the pixel and introduces you to the brave, new, resolution-independent world.</p>
-		</section>
-			
-		<hgroup>
-			<h2>Part 1: Dude, where's my pixel?</h2>
-			<h3>Coping mechanisms for dealing with high pixel densities</h3>
-		</hgroup>
+			<div class="slide">
+				<h2>Synopsis</h2>
+				<p>Traditionally, graphical user interfaces have been designed and developed using widths, heights and coordinates measured in pixels. However, display technology advances in recent years require us to re-evaluate our relationship with the humble pixel. Equally, the ever-growing variety of screen sizes and shapes is forcing us out of our pixel comfort zone.</p>
+			<p><strong>The Death of the Pixel</strong> says farewell to the pixel and introduces you to the brave, new, resolution-independent world.</p>
+			</div>
 		
-		<section>
-			<h3>First, some terminology</h3>
-			<dl>
-				<dt>Pixel</dt>
-				<dd>
-					<p>Picture element.</p>
-				</dd>
-				
-				<dt>Screen Resolution</dt>
-				<dd>
-					<p>Screens are made up of a grid of pixels. The screen resolution refers to the width and height of that grid or, to put it another way, how many columns and rows it contains. Usually screen resolutions are given in the form: <var>width</var> x <var>height</var>.</p>
-					<p>For example: A screen resolution of "1024 x 768" means that the grid of pixels that makes up that screen is 1024 pixels wide and 768 pixels tall.
-				</dd>
-				
-				<dt>Screen Size</dt>
-				<dd>
-					<p>The physical size of a screen is typically given as the diagonal distance between opposite corners of the screen.</p>
-				</dd>
-				
-				<dt>Pixel Density</dt>
-				<dd>
-					<p>The pixel density is a measurement of how many pixels are crammed into an inch of a display. Higher pixel densities mean more pixels crammed into the same physical space or, to put it another way, smaller pixels.</p>
-					<p>Typically measured in Pixels Per Inch (or PPI). If you know the screen size & resolution you can calculate the corresponding pixel density quite easily.</p>
-				</dd>
-				
-			</dl>
-		</section>
+			<hgroup class="slide">
+				<h2>Part 1: Dude, where's my pixel?</h2>
+				<h3>Coping mechanisms for dealing with high pixel densities</h3>
+			</hgroup>
 		
-		<section>
-			<h3>Screen evolution</h3>
-			<p>For a long time, computer screen sizes and resolutions increased more or less in lock step. There has always been some variance in pixel densities, but for the most part it was insignificant. In practical terms, users therefore equated higher resolution screens with increased desktop space. More pixels meant you could have more icons or windows visible on the screen at one time.</p>
-			
-			<!-- Image of 3 screens, each bigger than the last. There is the same window on each in the same size but with increasing amounts of free space around it -->
-			
-			<p>A consequence of this was that an application design laid out in pixels it would appear at roughly the same physical size on any screen. Some screens with higher densities might display the UI slightly smaller, but rarely so small that it became unreadable or unusable.</p>
-			<p>Pixels therefore became the defacto unit used to lay out UIs and designers, developers and tools have all come to rely on them over the years.</p>
+			<section class="slide">
+				<h3>First, some terminology</h3>
+				<dl>
+					<dt>Pixel</dt>
+					<dd>
+						<p>Picture element.</p>
+					</dd>
+					
+					<dt>Screen Resolution</dt>
+					<dd>
+						<p>Screens are made up of a grid of pixels. The screen resolution refers to the width and height of that grid or, to put it another way, how many columns and rows it contains. Usually screen resolutions are given in the form: <var>width</var> x <var>height</var>.</p>
+						<p>For example: A screen resolution of "1024 x 768" means that the grid of pixels that makes up that screen is 1024 pixels wide and 768 pixels tall.
+					</dd>
+					
+					<dt>Screen Size</dt>
+					<dd>
+						<p>The physical size of a screen is typically given as the diagonal distance between opposite corners of the screen.</p>
+					</dd>
+					
+					<dt>Pixel Density</dt>
+					<dd>
+						<p>The pixel density is a measurement of how many pixels are crammed into an inch of a display. Higher pixel densities mean more pixels crammed into the same physical space or, to put it another way, smaller pixels.</p>
+						<p>Typically measured in Pixels Per Inch (or PPI). If you know the screen size & resolution you can calculate the corresponding pixel density quite easily.</p>
+					</dd>
+					
+				</dl>
+			</section>
+		
+			<section class="slide">
+				<h3>Screen evolution</h3>
+				<p>For a long time, computer screen sizes and resolutions increased more or less in lock step. There has always been some variance in pixel densities, but for the most part it was insignificant. In practical terms, users therefore equated higher resolution screens with increased desktop space. More pixels meant you could have more icons or windows visible on the screen at one time.</p>
 				
-		</section>
+				<!-- Image of 3 screens, each bigger than the last. There is the same window on each in the same size but with increasing amounts of free space around it -->
+				
+				<p>A consequence of this was that an application design laid out in pixels it would appear at roughly the same physical size on any screen. Some screens with higher densities might display the UI slightly smaller, but rarely so small that it became unreadable or unusable.</p>
+				<p>Pixels therefore became the defacto unit used to lay out UIs and designers, developers and tools have all come to rely on them over the years.</p>
+				
+			</section>
 		
-		<section>
-			<h3>Pixel overload</h3>
-			<p>In recent times we have seen many devices appear that boast significantly higher pixel densities that what we've been used to from tradition computer displays. Smartphones and tablets have lead the charge but laptops and other devices are now following suit.</p>
-			<p>If UIs designed for screens with lower pixel densities were displayed pixel for pixel on significantly higher density screens, they would look tiny. When Apple introduced the iPhone 4, its screen size was the exact same 3.5" of its predecessor but it had double the pixel density. Had they chosen to go down that route, old apps would have appeared at one quarter their size when displayed on the new iPhone. That would have made text too small to comfortably read and buttons to small to tap with your fingers.</p>
+			<section class="slide">
+				<h3>Pixel overload</h3>
+				<p>In recent times we have seen many devices appear that boast significantly higher pixel densities that what we've been used to from tradition computer displays. Smartphones and tablets have lead the charge but laptops and other devices are now following suit.</p>
+				<p>If UIs designed for screens with lower pixel densities were displayed pixel for pixel on significantly higher density screens, they would look tiny. When Apple introduced the iPhone 4, its screen size was the exact same 3.5" of its predecessor but it had double the pixel density. Had they chosen to go down that route, old apps would have appeared at one quarter their size when displayed on the new iPhone. That would have made text too small to comfortably read and buttons to small to tap with your fingers.</p>
+				
+				<!-- Image of iPhone 3GS & iPhone 4 side by side with app appearing 1/4 size on iPhone 4 and maginifying glass showing smaller pixels -->
+				
+				<p>Fortunately Apple didn't do that. Instead, they scaled up older applications so that they continued to fill the screen and thus appear at the same physical size to the users. What was previously one pixel in an app's UI was now a cluster of 2x2 pixels.</p>
+				
+				<!-- Image of iPhone 3GS & iPhone 4 side by side now showing the app full screen on both with simple pixel doubling -->
+				
+				<p>So why bother with the extra pixels then? The answer is that it allowed applications to use the extra pixels to display sharper looking text and graphics. In a sense they didn't quadruple the pixels, they just broke each pixel down into 4 smaller ones.</p>
 			
-			<!-- Image of iPhone 3GS & iPhone 4 side by side with app appearing 1/4 size on iPhone 4 and maginifying glass showing smaller pixels -->
+				<!-- Image of iPhone 3GS & iPhone 4 side by side now showing the app full screen but with sharper version on iPhone 4 -->
+				
+				<p>In fact, that's precisely how the iPhone 4 behaves as far as app developers are concerned. Apps are still laid out on a grid of 320x480. However, the system automatically makes use of the extra pixels on the screen to make text and other programatically drawn visual elements look sharper. Developers also have the ability to supply higher resolution bitmap graphics which are mapped to the screen's physical pixels for maximum clarity and detail.</p>
+				<p>That 320x480 grid is no longer measured in pixels though. Instead it uses an <em>abstraction</em> of pixels which, in the case of iOS, are called points. Apple must have planned this all along actually, because iOS UIs were always measured in points. It just so happened that on devices up to and including the iPhone 3GS, 1 point = 1 pixel. On later devices the mapping became 1 point = 2 pixels.</p>
+			</section>
 			
-			<p>Fortunately Apple didn't do that. Instead, they scaled up older applications so that they continued to fill the screen and thus appear at the same physical size to the users. What was previously one pixel in an app's UI was now a cluster of 2x2 pixels.</p>
-			
-			<!-- Image of iPhone 3GS & iPhone 4 side by side now showing the app full screen on both with simple pixel doubling -->
-			
-			<p>So why bother with the extra pixels then? The answer is that it allowed applications to use the extra pixels to display sharper looking text and graphics. In a sense they didn't quadruple the pixels, they just broke each pixel down into 4 smaller ones.</p>
-		
-			<!-- Image of iPhone 3GS & iPhone 4 side by side now showing the app full screen but with sharper version on iPhone 4 -->
-			
-			<p>In fact, that's precisely how the iPhone 4 behaves as far as app developers are concerned. Apps are still laid out on a grid of 320x480. However, the system automatically makes use of the extra pixels on the screen to make text and other programatically drawn visual elements look sharper. Developers also have the ability to supply higher resolution bitmap graphics which are mapped to the screen's physical pixels for maximum clarity and detail.</p>
-			<p>That 320x480 grid is no longer measured in pixels though. Instead it uses an <em>abstraction</em> of pixels which, in the case of iOS, are called points. Apple must have planned this all along actually, because iOS UIs were always measured in points. It just so happened that on devices up to and including the iPhone 3GS, 1 point = 1 pixel. On later devices the mapping became 1 point = 2 pixels.</p>
-		</section>
-		
-		<section>
-			<h3>Pixel Abstractions</h3>
-			<p>Introducing an intermediate unit of measurement other than pixels allows us to design UIs that will appear to users at roughly the same physical size across a range of devices with varying pixel densities. In other words, units like points are a layer of abstraction between a UI design and physical pixels on the screen used to display it. I will therefore refer to such units collectively as pixel abstractions.</p>
-			<p>In iOS points are units of pixel abstractions and, as we will see, other systems use other units. The basic principle is always the same though. The units of pixel abstraction are converted to a corresponding number of physical pixels on the screen by the operating system. On higher density screens there are more pixels per unit so the graphics can be rendered with higher fidelity.</p>
-			<p>What this means for designers and developers is that they should design exclusively in terms of pixel abstractions and let the operating systems do the hard work of translating their designs into physical pixels on the various devices.</p>
-			
-			<aside>
-				<h4>Physical size</h4>
-				<p>It's tempting to think of pixel abstraction units being similar to units of distance like centimeters or inches. After all, the goal is to have a UI element appear at the same physical size regardless of the type of screen it is being displayed on. In practise though, it's a rough mapping. An iOS button that is 44pts wide may appear 1cm wide on an iPhone but will be slightly larger on an iPad. There is a similar size variance on other platforms and their respective pixel abstractions too.</p>
-				<p>It's fair to say that an item that is a certain number of pixel abstraction units wide will appear at a similar physical size regardless of device though. You won't find your UI suddenly looking half its expected size on some devices. Just don't expect write an accurate ruler app anytime soon!</p>
-			<aside>
-		</section>
+			<section class="slide">
+				<h3>Pixel Abstractions</h3>
+				<p>Introducing an intermediate unit of measurement other than pixels allows us to design UIs that will appear to users at roughly the same physical size across a range of devices with varying pixel densities. In other words, units like points are a layer of abstraction between a UI design and physical pixels on the screen used to display it. I will therefore refer to such units collectively as pixel abstractions.</p>
+				<p>In iOS points are units of pixel abstractions and, as we will see, other systems use other units. The basic principle is always the same though. The units of pixel abstraction are converted to a corresponding number of physical pixels on the screen by the operating system. On higher density screens there are more pixels per unit so the graphics can be rendered with higher fidelity.</p>
+				<p>What this means for designers and developers is that they should design exclusively in terms of pixel abstractions and let the operating systems do the hard work of translating their designs into physical pixels on the various devices.</p>
+				
+				<aside>
+					<h4>Physical size</h4>
+					<p>It's tempting to think of pixel abstraction units being similar to units of distance like centimeters or inches. After all, the goal is to have a UI element appear at the same physical size regardless of the type of screen it is being displayed on. In practise though, it's a rough mapping. An iOS button that is 44pts wide may appear 1cm wide on an iPhone but will be slightly larger on an iPad. There is a similar size variance on other platforms and their respective pixel abstractions too.</p>
+					<p>It's fair to say that an item that is a certain number of pixel abstraction units wide will appear at a similar physical size regardless of device though. You won't find your UI suddenly looking half its expected size on some devices. Just don't expect write an accurate ruler app anytime soon!</p>
+				</aside>
+			</section>
 	
-		<section>
-			<h3>Android</h3>
-			<p>We've seen how iOS's unti of pixel abstraction is points. The equivalent unit on Android is called DIP (Density Independent Pixel) which is often abbreviated to dp. Because there is a far greater variety of Android devices out there, the conversion from DIPs to	pixels is slightly more complicated.</p>
-			<p>To help simplify things a litte, Android has a number of pre-defined screen densities. Whichever is closest to the devices actual screen density is what is used for conversions to pixels.</p>
-			<dl>
-				<dt>LDPI</dt>
-				<dd>This is for low density screens.</dd>
+			<section class="slide">
+				<h3>Android</h3>
+				<p>We've seen how iOS's unit of pixel abstraction is points. The equivalent unit on Android is called DIP (Density Independent Pixel) which is often abbreviated to dp. Because there is a far greater variety of Android devices out there, the conversion from DIPs to	pixels is slightly more complicated.</p>
+				<p>To help simplify things a littLe, Android has a number of pre-defined screen densities. Whichever is closest to the devices actual screen density is what is used for conversions to pixels.</p>
+				<dl>
+					<dt>LDPI</dt>
+					<dd>This is for low density screens.</dd>
+					
+					<dt>MDPI</dt>
+					<dd>This is for low density screens.</dd>
+					
+					<dt>HDPI</dt>
+					<dd>This is for low density screens.</dd>
+					
+					<dt>XHDPI</dt>
+					<dd>This is for low density screens.</dd>
+				</dl>	
 				
-				<dt>MDPI</dt>
-				<dd>This is for low density screens.</dd>
-				
-				<dt>HDPI</dt>
-				<dd>This is for low density screens.</dd>
-				
-				<dt>XHDPI</dt>
-				<dd>This is for low density screens.</dd>
-			</dl>	
-		
+			</section>
 			
 		</section>
-	
 	
 		
 	</div>
-	<footer>
+	<footer class="slide">
 		<p>&copy; 2013 <a href="http://cirrus.twiddles.com/">James Nash</a>, all rights reserved.</p>
 	</footer>
 </body>
