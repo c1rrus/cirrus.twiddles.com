@@ -175,7 +175,7 @@ header {
   width: 80%;
   margin: 0 auto 3em auto;
   padding: 1em;
-  border: 2px solid black;
+  border: 2px solid #000;
   background-color: #fff;
 }
 
@@ -269,6 +269,8 @@ body.presentation #main .slide {
 }
 /* line 211, ../sass/screen.scss */
 body.presentation .slide {
+  top: 0;
+  left: 105%;
   display: none;
   box-sizing: border-box;
   margin: 0;
@@ -276,27 +278,29 @@ body.presentation .slide {
   height: 100%;
   position: fixed;
   overflow: auto;
-  box-shadow: 0 5px 30px black;
+  box-shadow: 0 5px 30px #000;
 }
-/* line 222, ../sass/screen.scss */
-body.presentation .current {
+/* line 224, ../sass/screen.scss */
+body.presentation .visible {
   display: block;
-  top: 0;
-  left: 0;
 }
 /* line 228, ../sass/screen.scss */
+body.presentation .current {
+  left: 0;
+}
+/* line 232, ../sass/screen.scss */
 body.presentation .away-forward {
-  -webkit-animation: slide-away-to-right 0.9s ease-in-out;
-}
-/* line 231, ../sass/screen.scss */
-body.presentation .in-forward {
-  -webkit-animation: slide-in-from-left 0.9s ease-in-out;
-}
-/* line 234, ../sass/screen.scss */
-body.presentation .away-backward {
   -webkit-animation: slide-away-to-left 0.9s ease-in-out;
 }
-/* line 237, ../sass/screen.scss */
-body.presentation .in-backward {
+/* line 235, ../sass/screen.scss */
+body.presentation .in-forward {
   -webkit-animation: slide-in-from-right 0.9s ease-in-out;
+}
+/* line 238, ../sass/screen.scss */
+body.presentation .away-backward {
+  -webkit-animation: slide-away-to-right 0.9s ease-in-out;
+}
+/* line 241, ../sass/screen.scss */
+body.presentation .in-backward {
+  -webkit-animation: slide-in-from-left 0.9s ease-in-out;
 }

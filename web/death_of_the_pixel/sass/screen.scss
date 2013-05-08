@@ -195,7 +195,7 @@ body.presentation {
 	
 	background-color: #666;
 	
-	// hide main area's bacgkound
+	// hide main area's background
 	#main {
 		background: none;
 		padding: 0;
@@ -209,6 +209,8 @@ body.presentation {
 	}
 	
 	.slide {
+		top: 0;
+		left: $offScreenLeftPos;
 		display: none;
 		box-sizing: border-box;
 		margin: 0;
@@ -219,23 +221,25 @@ body.presentation {
 		box-shadow: 0 5px 30px #000;
 	}
 	
-	.current {
+	.visible {
 		display: block;
-		top: 0;
+	}
+	
+	.current {
 		left: 0;
 	}
 	
 	.away-forward {
-		-webkit-animation: slide-away-to-right $slideAnimDuration ease-in-out;
-	}
-	.in-forward {
-		-webkit-animation: slide-in-from-left $slideAnimDuration ease-in-out;
-	}
-	.away-backward {
 		-webkit-animation: slide-away-to-left $slideAnimDuration ease-in-out;
 	}
-	.in-backward {
+	.in-forward {
 		-webkit-animation: slide-in-from-right $slideAnimDuration ease-in-out;
+	}
+	.away-backward {
+		-webkit-animation: slide-away-to-right $slideAnimDuration ease-in-out;
+	}
+	.in-backward {
+		-webkit-animation: slide-in-from-left $slideAnimDuration ease-in-out;
 	}
 	
 }
