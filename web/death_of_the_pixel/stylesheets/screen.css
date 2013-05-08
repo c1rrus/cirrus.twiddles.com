@@ -2,7 +2,7 @@
  * In this file you should write your main styles. (or centralize your imports)
  * Import this file using the following HTML or equivalent:
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
-/* line 17, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 17, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -24,45 +24,45 @@ time, mark, audio, video {
   vertical-align: baseline;
 }
 
-/* line 22, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 22, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 html {
   line-height: 1;
 }
 
-/* line 24, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 24, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 ol, ul {
   list-style: none;
 }
 
-/* line 26, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 26, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 28, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 28, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 caption, th, td {
   text-align: left;
   font-weight: normal;
   vertical-align: middle;
 }
 
-/* line 30, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 30, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q, blockquote {
   quotes: none;
 }
-/* line 103, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 103, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 q:before, q:after, blockquote:before, blockquote:after {
   content: "";
   content: none;
 }
 
-/* line 32, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 32, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 a img {
   border: none;
 }
 
-/* line 116, ../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+/* line 116, ../../../../../../../Library/Ruby/Gems/1.8/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
   display: block;
 }
@@ -135,23 +135,23 @@ hgroup h3 {
 }
 
 /*
- * Page sections.
+ * Page mode.
  * Includes multi-image backgrounds and associated effects.
  *
  */
 @-webkit-keyframes cemetary_bg_scroll {
-  /* line 83, ../sass/screen.scss */
+  /* line 82, ../sass/screen.scss */
   from {
     background-position-x: 50%, 0px, 60%, 70%, 0px, 0px, 11%, 0;
   }
 
-  /* line 86, ../sass/screen.scss */
+  /* line 85, ../sass/screen.scss */
   to {
     background-position-x: 50%, 2772px, 60%, 70%, 1656px, 1023px, 11%, 0;
   }
 }
 
-/* line 91, ../sass/screen.scss */
+/* line 90, ../sass/screen.scss */
 header {
   height: 360px;
   background-color: #56436e;
@@ -163,15 +163,15 @@ header {
   -webkit-animation: cemetary_bg_scroll 90s linear infinite;
 }
 
-/* line 105, ../sass/screen.scss */
+/* line 104, ../sass/screen.scss */
 #main {
   padding: 3em 0 3em 0;
   background-image: url("../grass_top.png"), url("../grass_bottom.png"), url("../soil.png");
   background-repeat: repeat-x, repeat-x, repeat;
   background-position-y: top, bottom, top;
 }
-/* line 113, ../sass/screen.scss */
-#main section, #main hgroup {
+/* line 112, ../sass/screen.scss */
+#main .slide {
   width: 80%;
   margin: 0 auto 3em auto;
   padding: 1em;
@@ -179,7 +179,7 @@ header {
   background-color: #fff;
 }
 
-/* line 124, ../sass/screen.scss */
+/* line 123, ../sass/screen.scss */
 footer {
   background-color: #448afc;
   background-image: url("../oz.png"), url("../sky_oz.png");
@@ -189,8 +189,114 @@ footer {
   min-height: 200px;
   padding: 1em 0 1em 0;
 }
-/* line 134, ../sass/screen.scss */
+/* line 133, ../sass/screen.scss */
 footer p {
   width: 80%;
   margin: 0 auto 0 auto;
+}
+
+@-webkit-keyframes slide-away-to-left {
+  /* line 148, ../sass/screen.scss */
+  from {
+    left: 0;
+    -webkit-transform: scale(1, 1);
+  }
+
+  /* line 153, ../sass/screen.scss */
+  to {
+    left: -105%;
+    -webkit-transform: scale(0.8, 0.8);
+  }
+}
+
+@-webkit-keyframes slide-in-from-left {
+  /* line 160, ../sass/screen.scss */
+  from {
+    left: -105%;
+    -webkit-transform: scale(0.8, 0.8);
+  }
+
+  /* line 164, ../sass/screen.scss */
+  to {
+    left: 0;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+@-webkit-keyframes slide-away-to-right {
+  /* line 172, ../sass/screen.scss */
+  from {
+    left: 0;
+    -webkit-transform: scale(1, 1);
+  }
+
+  /* line 176, ../sass/screen.scss */
+  to {
+    left: 105%;
+    -webkit-transform: scale(0.8, 0.8);
+  }
+}
+
+@-webkit-keyframes slide-in-from-right {
+  /* line 183, ../sass/screen.scss */
+  from {
+    left: 105%;
+    -webkit-transform: scale(0.8, 0.8);
+  }
+
+  /* line 187, ../sass/screen.scss */
+  to {
+    left: 0;
+    -webkit-transform: scale(1, 1);
+  }
+}
+
+/* line 194, ../sass/screen.scss */
+body.presentation {
+  background-color: #666;
+}
+/* line 199, ../sass/screen.scss */
+body.presentation #main {
+  background: none;
+  padding: 0;
+  margin: 0;
+}
+/* line 204, ../sass/screen.scss */
+body.presentation #main .slide {
+  width: 100%;
+  border: none;
+  margin: 0;
+}
+/* line 211, ../sass/screen.scss */
+body.presentation .slide {
+  display: none;
+  box-sizing: border-box;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  overflow: auto;
+  box-shadow: 0 5px 30px black;
+}
+/* line 222, ../sass/screen.scss */
+body.presentation .current {
+  display: block;
+  top: 0;
+  left: 0;
+}
+/* line 228, ../sass/screen.scss */
+body.presentation .away-forward {
+  -webkit-animation: slide-away-to-right 0.9s ease-in-out;
+}
+/* line 231, ../sass/screen.scss */
+body.presentation .in-forward {
+  -webkit-animation: slide-in-from-left 0.9s ease-in-out;
+}
+/* line 234, ../sass/screen.scss */
+body.presentation .away-backward {
+  -webkit-animation: slide-away-to-left 0.9s ease-in-out;
+}
+/* line 237, ../sass/screen.scss */
+body.presentation .in-backward {
+  -webkit-animation: slide-in-from-right 0.9s ease-in-out;
 }

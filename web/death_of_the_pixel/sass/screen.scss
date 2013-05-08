@@ -74,11 +74,10 @@ hgroup {
 
 
 /*
- * Page sections.
+ * Page mode.
  * Includes multi-image backgrounds and associated effects.
  *
  */
-
 @-webkit-keyframes cemetary_bg_scroll {
 	from {
 		background-position-x: 50%, 0px, 60%, 70%, 0px, 0px, 11%, 0;
@@ -110,7 +109,7 @@ header {
 	background-position-y: top, bottom, top;
 	
 	
-	section, hgroup {
+	.slide {
 		width: 80%;
 		margin: 0 auto 3em auto;
 		padding: 1em;
@@ -136,3 +135,108 @@ footer {
 		margin: 0 auto 0 auto;
 	}
 }
+
+
+
+// Shake things up for presentation mode
+
+$offScreenLeftPos: 105%;
+$offScreenScale: 0.8;
+$slideAnimDuration: 0.9s;
+
+@-webkit-keyframes slide-away-to-left {
+	from {
+		left: 0;
+		-webkit-transform: scale(1, 1);
+		
+	}
+	to {
+		left: -1 * $offScreenLeftPos;
+		-webkit-transform: scale($offScreenScale, $offScreenScale);
+	}
+}
+
+@-webkit-keyframes slide-in-from-left {
+	from {
+		left: -1 * $offScreenLeftPos;
+		-webkit-transform: scale($offScreenScale, $offScreenScale);
+	}
+	to {
+		left: 0;
+		-webkit-transform: scale(1, 1);
+		
+	}
+}
+
+@-webkit-keyframes slide-away-to-right {
+	from {
+		left: 0;
+		-webkit-transform: scale(1, 1);
+	}
+	to {
+		left: $offScreenLeftPos;
+		-webkit-transform: scale($offScreenScale, $offScreenScale);
+	}
+}
+
+@-webkit-keyframes slide-in-from-right {
+	from {
+		left: $offScreenLeftPos;
+		-webkit-transform: scale($offScreenScale, $offScreenScale);
+	}
+	to {
+		left: 0;
+		-webkit-transform: scale(1, 1);
+	}
+}
+
+
+body.presentation {
+	
+	background-color: #666;
+	
+	// hide main area's bacgkound
+	#main {
+		background: none;
+		padding: 0;
+		margin: 0;
+		
+		.slide {
+			width: 100%;
+			border: none;
+			margin: 0;
+		}
+	}
+	
+	.slide {
+		display: none;
+		box-sizing: border-box;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		overflow: auto;
+		box-shadow: 0 5px 30px #000;
+	}
+	
+	.current {
+		display: block;
+		top: 0;
+		left: 0;
+	}
+	
+	.away-forward {
+		-webkit-animation: slide-away-to-right $slideAnimDuration ease-in-out;
+	}
+	.in-forward {
+		-webkit-animation: slide-in-from-left $slideAnimDuration ease-in-out;
+	}
+	.away-backward {
+		-webkit-animation: slide-away-to-left $slideAnimDuration ease-in-out;
+	}
+	.in-backward {
+		-webkit-animation: slide-in-from-right $slideAnimDuration ease-in-out;
+	}
+	
+}
+
