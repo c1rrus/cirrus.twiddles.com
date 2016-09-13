@@ -1,6 +1,6 @@
 <?php
 	require_once("../../includes/common.inc");
-	require_once("../../includes/tweets.inc");
+	//require_once("../../includes/tweets.inc");
 	
 	$thePageRenderer->setThisPage( 1 ); // 1 = blog
 	$thePageRenderer->doHeader('<link rel="stylesheet" type="text/css" href="blog.css" />');
@@ -19,10 +19,7 @@
 </div>
 <div id="secondary-content">
 	<div class="box">
-		<h2>Recent tweets by James Nash</h2>
-		<?php
-			renderTweetsToXhtml( $feed, 6 );
-		?>
+
 	</div>
 </div>
 <?php
