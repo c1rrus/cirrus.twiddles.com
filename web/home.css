@@ -1,10 +1,10 @@
 
-li#mmbook {
+#mmbook {
 	display: block;
 	margin-left: 0;
 }
 
-li#mmbook a {
+#mmbook a {
 	display: block;
 	min-width: 100px;
 	margin: 0;
@@ -13,20 +13,15 @@ li#mmbook a {
 	text-align: center;
 }
 
-ul.social {
+.social {
 	list-style-type: none;	
 }
 
-ul.social li {
-	display: block;
-	width: 46%;
-	margin: 0 2% 1em 2%;
-	padding: 0;
-	float: left;
+.social li {
 	background: #434343 url('style/boxbg.jpg') no-repeat 50% 0;	
 }
 
-ul.social li a {
+.social li a {
 	display: block;
 	min-height: 44px;
 	border: 1px solid #b6e4ff;
@@ -34,11 +29,12 @@ ul.social li a {
 	padding: 5px 5px 5px 60px;
 }
 
-ul.social li a:visited {
+.social li a:visited {
 	border: 1px solid #ed7de4;
 }
 
-ul.social li a:hover, ul.social li a:active {
+.social li a:hover,
+.social li a:active {
 	border: 1px solid #ffffff;
 }
 
@@ -87,7 +83,8 @@ a.small-button {
 	border: 2px solid #434343;
 }
 
-a.small-button:hover, a.small-button:active {
+a.small-button:hover,
+a.small-button:active {
 	border-color: #fff;
 }
 

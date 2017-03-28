@@ -146,6 +146,7 @@ class PageRenderer{
 		<meta name="description" content="'.$this->getThisPage()->getDescription().'" />
 		<link rel="shortcut icon" href="'.PageRenderer::SITEROOT.'/favicon.ico" />
 		<link rel="stylesheet" type="text/css" media="all" href="'.PageRenderer::SITEROOT.'/style/screen.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
 ';
 		if( !empty( $extraTags ) ){
 			print "\t\t".$extraTags."\n";	
