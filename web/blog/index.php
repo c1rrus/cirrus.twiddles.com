@@ -3,6 +3,7 @@
 	//require_once("../../includes/tweets.inc");
 	
 	$thePageRenderer->setThisPage( 1 ); // 1 = blog
+	$thePageRenderer->doHeader();
 ?>
 
 <div class="box">
