@@ -11,7 +11,7 @@
 		<p><strong>Nasher</strong> is an up-and-coming trance and electro <abbr title="disc jockey">DJ</abbr> and producer. He has also set up his own label <strong>9Lives</strong> under which
 		he'll be publishing his own music. I have designed the logos for both his stage name and label. They share the same "Nasher" logotype to re-enforce the fact that they represent different
 		aspects of the same artist.</p>
-		<p>Be sure to check out his <a href="http://www.myspace.com/djnasher">Nasher MySpace</a> and <a href="http://twitter.com/DJNasher">Nasher Twitter page</a> for more info and music samples!</p>
+		<p>Be sure to check out his <a href="https://www.myspace.com/djnasher">Nasher MySpace</a> and <a href="http://twitter.com/nasher">Nasher Twitter page</a> for more info and music samples!</p>
 	</div>
 	<div class="box">
 		<h2 id="nasher_logos">Nasher logos</h2>	
@@ -27,7 +27,7 @@
 			<li><a href="pics/9lives.jpg"><img src="9lives.jpg" alt="9Lives heart emblem" /> <span>9Lives logo</span></a></li>
 			<li><a href="pics/9lives_text.jpg"><img src="9lives_text.jpg" alt="9Lives logotype" /> <span>9Lives logotype</span></a></li>
 		</ul>
-		<p class="break">Like the <strong>9Lives</strong> logo? Why not buy some groovy <a href="http://nasher9lives.spreadshirt.co.uk/9lives-C145153"><strong>9Lives</strong> merchandise</a>!</p>
+		<p class="break">Like the <strong>9Lives</strong> logo? Why not buy some groovy <a href="https://nasher9lives.spreadshirt.co.uk/9lives"><strong>9Lives</strong> merchandise</a>!</p>
 	</div>
 	<div class="box">
 		<h2 id="old">Old "DJ Nasher" &amp; "Nasher 9 Lives" logos</h2>

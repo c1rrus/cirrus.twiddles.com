@@ -6,8 +6,8 @@
 <div id="main-content">
 	<div class="box">
 		<h2>Foreword</h2>
-		<p>Hello! My name's <a href="/"><strong>James Nash</strong></a> and one of my favourite past-times is making pictures. I do a fair bit doodling and drawing with pens and pencils but also enjoy making pictures using just the computer (mostly using <a href="http://www.gimp.org/">GIMP</a> and <a href="http://www.inkscape.org/">Inkscape</a>). Some of my favourite works actually use a combination of traditional and digital media.</p>
-		<p>I've put together a selection of artwork I've done below. I've used different sites to publish some of my work so in those cases I'll be linking to them rather than having a local copy on this site (So don't panic if a link suddenly drops you on <a href="http://www.flickr.com/">Flickr</a> or <a href="http://event-horizon.cyberfinity.net/">Event-Horizon</a>). <strong>I hope you enjoy the pictures!</strong></p>
+		<p>Hello! My name's <a href="/"><strong>James Nash</strong></a> and one of my favourite past-times is making pictures. I do a fair bit doodling and drawing with pens and pencils but also enjoy making pictures using just the computer (mostly using <a href="https://www.gimp.org/">GIMP</a> and <a href="https://www.inkscape.org/">Inkscape</a>). Some of my favourite works actually use a combination of traditional and digital media.</p>
+		<p>I've put together a selection of artwork I've done below. I've used different sites to publish some of my work so in those cases I'll be linking to them rather than having a local copy on this site (So don't panic if a link suddenly drops you on <a href="https://www.flickr.com/">Flickr</a> or <a href="http://event-horizon.cyberfinity.net/">Event-Horizon</a>). <strong>I hope you enjoy the pictures!</strong></p>
 	</div>
 	<div class="box">
 		<h2>Galleries</h2>
@@ -22,7 +22,7 @@
 <div id="secondary-content">
 	<div class="box">
 		<h2>Copyrights</h2>
-		<p>I'm fairly liberal about the usage of artwork I publish online. Much of it is under a <a href="http://www.creativecommons.org/">Creative Commons</a> licenses which typically means you're free to distribute those pictures as long as you credit me as the original creator (in some cases there may be restrictions on commercial use, so please be sure to check the license per picture). Some of my art is not under a <abbr title="Creative Commons">CC</abbr> license in which case I would ask you not to re-distribute it without getting my permission first. Having said that, you're most welcome to link to it (and I don't mind if you have a thumbnail copy or something like that on the page that links to it).</p>
+		<p>I'm fairly liberal about the usage of artwork I publish online. Much of it is under a <a href="https://creativecommons.org/">Creative Commons</a> licenses which typically means you're free to distribute those pictures as long as you credit me as the original creator (in some cases there may be restrictions on commercial use, so please be sure to check the license per picture). Some of my art is not under a <abbr title="Creative Commons">CC</abbr> license in which case I would ask you not to re-distribute it without getting my permission first. Having said that, you're most welcome to link to it (and I don't mind if you have a thumbnail copy or something like that on the page that links to it).</p>
 		<p>The bottom line is that I'm keen for my work to be seen by as many people as possible (otherwise I wouldn't be publishing it!) but I want people to know it was me who made it (also links to <a href="/">my site</a> are always appreciated). I think that's fair enough, don't you?</p>
 	</div>
 </div>	

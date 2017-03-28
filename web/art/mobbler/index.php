@@ -8,9 +8,9 @@
 <div id="main-content">
 	<div class="box">
 		<h2>Mobbler artwork</h2>
-		<p><a href="http://code.google.com/p/mobbler/">Mobbler</a> is an excellent, freeware <a href="http://www.last.fm/">Last.fm</a> client for Symbian/S60 phones. Currently it uses the Last.fm logo as its application icon, but the
-		developers always wanted the app to have its own icon and identity. I offered to have a go and, after discussing some ideas with <a href="http://twitter.com/eartle">Michael Coffey</a> (the lead developer), created two
-		alternative Mobbler logo designs which were put to a <a href="http://answers.polldaddy.com/poll/1713603/">public vote</a>. The winner has been now been adopted as the official logo and
+		<p><a href="http://mobbler.ffey.co/">Mobbler</a> is an excellent, freeware <a href="https://www.last.fm/">Last.fm</a> client for Symbian/S60 phones. Currently it uses the Last.fm logo as its application icon, but the
+		developers always wanted the app to have its own icon and identity. I offered to have a go and, after discussing some ideas with <a href="https://twitter.com/eartle">Michael Coffey</a> (the lead developer), created two
+		alternative Mobbler logo designs which were put to a <a href="http://polldaddy.com/poll/1713603/">public vote</a>. The winner has been now been adopted as the official logo and
 		will also be used as the app icon in all future releases (the first to feature it is due very soon, by the way!).</p>
 		<ul class="gallery">
 			<li><a href="http://www.flickr.com/photos/james_nash/3673292876/"><img src="mobbler_icon.jpg" alt="Mobbler app icon" /> <span>Icon for the Mobbler app</span></a></li>
@@ -20,7 +20,7 @@
 			<li><a href="http://www.flickr.com/photos/james_nash/3638476122/"><img src="mobbler_blue.jpg" alt="Mobbler blue" /> <span>Fancy blue Mobbler  wallpaper</span></a></li>
 			<li><a href="http://www.flickr.com/photos/james_nash/3635550284/"><img src="mobbler_orange.jpg" alt="Mobbler orange" /> <span>Fancy orange Mobbler  wallpaper</span></a></li>
 		</ul>
-		<p class="break">For the latest news and updates you may wish to <a href="http://twitter.com/Mobbler">follow Mobbler on Twitter</a>!</p>
+		<p class="break">For the latest news and updates you may wish to <a href="https://twitter.com/Mobbler">follow Mobbler on Twitter</a>!</p>
 	</div>
 </div>
 <div id="secondary-content">
