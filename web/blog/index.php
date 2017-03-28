@@ -12,7 +12,7 @@
     <ul>
         <li><a href="https://smartphoneshow.wordpress.com/">Symbian Smartphone Show Blog</a>. (Coverage of the 2008 Smartphone Show)</li>
         <li><a href="https://symbianmwc08.wordpress.com/">Symbian @ MWC 2008</a>. (Coverage of the 2008 Mobile World Congress)</li>
-        <li><a href="https://web-beta.archive.org/web/20110202185319/http://blog.symbian.org/">Symbian Foundation Blog</a>. (Now defunct. I wrote some of the original posts when the blog started and also created the <a href="https://web-beta.archive.org/web/20110401191121/http://blog.symbian.org/2009/04/01/symbian-based-toaster-announced/">Symbian Toaster April Fool's</a>)</li>
+        <li><a href="https://web-beta.archive.org/web/20110202185319/http://blog.symbian.org/">Symbian Foundation Blog</a>. (Now defunct. I wrote some of the original posts when the blog started and also created the <a href="https://web-beta.archive.org/web/20090405043504/http://blog.symbian.org:80/2009/04/01/symbian-based-toaster-announced/">Symbian Toaster April Fool's</a>)</li>
     </ul>
 </div>
 
