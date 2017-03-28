@@ -22,7 +22,7 @@
 		<h2 id="s60apps">S60 Applications</h2>
 		<p>I have designed icons for some freeware Symbian / S60 applications that either didn't have their own
 		icons or had very basic ones. Luckily the the respective developers liked my designs and used them in updates
-		for their apps! So, if you use <a href="http://graho.wordpress.com/2009/03/15/light-sabre-what-is-it/">LightSabre</a>, <a href="http://s2putty.sourceforge.net/">Putty for Symbian OS</a> or <a href="http://code.google.com/p/mobbler/">Mobbler</a> on your
+		for their apps! So, if you use <a href="https://graho.wordpress.com/2009/03/15/light-sabre-what-is-it/">LightSabre</a>, <a href="http://s2putty.sourceforge.net/">Putty for Symbian OS</a> or <a href="http://code.google.com/p/mobbler/">Mobbler</a> on your
 		phone you can see my work right in your app menu! :-)</p>
 		<ul class="gallery">
 			<li><a href="http://www.flickr.com/photos/james_nash/2020278962/"><img src="lightsabre.jpg" alt="LightSabre app icon" /> <span>Icon for Graham Oldfield's LightSabre app</span></a></li>
