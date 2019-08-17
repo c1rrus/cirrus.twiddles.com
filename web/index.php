@@ -35,8 +35,8 @@
 <div id="secondary-content">
 	<div class="box">
 		<h2>James Nash's Work</h2>
-		<p>I am a User Experience Architect for a large consultancy firm. That means it's my job to make our  mobile app UIs as intuitive and delightful as possible.</p>
-		<p>Prior to that, I was a mobile software developer for over 6 years (yes, I really am a <em>phone geek</em>!). I therefore like to think I know a thing or two about mobile software, operating systems and the industry in general. However, <strong>unless clearly stated otherwise</strong>, everything I say and write on this site and elsewhere online is my own, <em>personal</em> opinion and <strong>in no way represents the views of my employer</strong>!</p>
+		<p>I am a Creative Technologist for a large consultancy firm. I live at the intersection of UX and technology and help people from each of those disciplines better collaborate. Over the past few years I have focussed a lot of my efforts on design systems as I see them as a major facilitator for such collaboration and also a means to level-up the quality of UX across all of an organisation's products.</p>
+		<p>Prior to that, I was a UX consultant for 3 years and a mobile software developer for over 6 years (yes, I really am a <em>phone geek</em>!). I therefore like to think I know a thing or two about mobile software, operating systems and the industry in general. However, <strong>unless clearly stated otherwise</strong>, everything I say and write on this site and elsewhere online is my own, <em>personal</em> opinion and <strong>in no way represents the views of my employer</strong>!</p>
 		<p>For other professional networking, please check out my: <a href="https://www.linkedin.com/in/jamescnash" id="linkedin" rel="me">LinkedIn profile.</a> Please note that I usually only accept people as a new contact if I've actually met them in real life!</p>
 		<h3>Shameless book plug</h3>
 		<p>By the way, on the (increasingly unlikely) off chance that you're into developing multimedia apps for Symbian you may find this book useful:</p>
