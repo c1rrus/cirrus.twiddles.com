@@ -1,7 +1,0 @@
-# James Nash's robots.txt file
-
-User-agent: *
-Disallow: /style/
-Disallow: /death_of_the_pixel/
-
-Sitemap: http://cirrus.twiddles.com/sitemap.xml
