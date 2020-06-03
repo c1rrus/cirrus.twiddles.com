@@ -1,0 +1,31 @@
+{
+  "name": "cirrus-realm",
+  "version": "2.2.0",
+  "description": "James Nash's personal website",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "start": "eleventy --serve",
+    "build": "eleventy",
+    "clean": "del dist/*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/c1rrus/cirrus.twiddles.com.git"
+  },
+  "keywords": [
+    "website",
+    "personal"
+  ],
+  "author": "James Nash (http://cirrus.twiddles.com/)",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/c1rrus/cirrus.twiddles.com/issues"
+  },
+  "homepage": "https://github.com/c1rrus/cirrus.twiddles.com#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-navigation": "^0.1.5",
+    "del-cli": "^3.0.1"
+  }
+}

@@ -1,0 +1,14 @@
+{% macro galleryList(galleryPages, currentUrl) %}
+<ul class="galleries">
+{%- for gallery in galleryPages %}
+  {%- set idAttr %} id="{{ gallery.key | lower }}"{% endset %}
+  <li>
+  {% if gallery.url == currentUrl %}
+    <span{{ idAttr | safe }}>{{ gallery.titleAttr | replace('by James Nash', '') }}</span>
+  {% else %}
+    <a{{ idAttr | safe }} href="{{ gallery.url }}">{{ gallery.titleAttr | replace('by James Nash', '') }}</a>
+  {% endif %}
+  </li>
+{%- endfor %}
+</ul>
+{% endmacro %}

@@ -1,11 +1,19 @@
-<?php
-	require_once("../../includes/common.inc");
-	//require_once("../../includes/tweets.inc");
-	
-	$thePageRenderer->setThisPage( 1 ); // 1 = blog
-	$thePageRenderer->doHeader();
-?>
-
+---
+layout: page.njk
+title: James Nash on the Blog
+description: Blog posts by James Nash. Mostly musings and ramblings about mobile phone technology.
+keywords:
+  - feed
+  - twitter
+  - mobile
+  - technology
+  - web
+  - geek
+eleventyNavigation:
+  key: Blog
+  order: 2
+  titleAttr: James Nash on the Blog
+---
 <div class="box">
     <h2>Blog not found</h2>
     <p>Unfortunately I haven't gotten around to building my own blog just yet. When I eventually do, it will live here!</p>
@@ -29,7 +37,3 @@
         </li>
     </ul>
 </div>
-
-<?php
-	$thePageRenderer->doFooter();
-?>

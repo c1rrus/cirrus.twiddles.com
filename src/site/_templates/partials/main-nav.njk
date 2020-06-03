@@ -1,0 +1,15 @@
+{% macro mainNav(navPages, currentUrl) %}
+<ul id="navigation">
+{%- for navItem in navPages %}
+  {%- set homeClassAttr = ' class="home"' if navItem.key == 'Home' %}
+  {%- set titleAttr %}{% if navItem.titleAttr %} title="{{ navItem.titleAttr }}"{% endif %}{% endset %}
+  <li>
+  {% if navItem.url == currentUrl %}
+    <span{{ homeClassAttr | safe }}>{{ navItem.title }}</span>
+  {% else %}
+    <a{{ homeClassAttr | safe }}{{ titleAttr | safe }} href="{{ navItem.url }}">{{ navItem.title }}</a>
+  {% endif %}
+  </li>
+{%- endfor %}
+</ul>
+{% endmacro %}

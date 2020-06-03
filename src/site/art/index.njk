@@ -1,8 +1,21 @@
-<?php
-	require_once("../../includes/galleries.inc");
-	$thePageRenderer->setThisPage( 2 ); // 2 = art
-	$thePageRenderer->doHeader( '<link rel="stylesheet" type="text/css" media="all" href="art.css" />' );
-?>
+---
+layout: page.njk
+title: Artwork by James Nash
+additionalCss: art.css
+description: Drawings, doodles and designs by James Nash, organised into convenient, themed galleries.
+keywords:
+  - artwork
+  - graphics
+  - doodles
+  - drawings
+  - designs
+  - logos
+eleventyNavigation:
+  key: Art
+  order: 3
+  titleAttr: Artwork by James Nash
+---
+{%- from 'partials/gallery-list.njk' import galleryList -%}
 <div id="main-content">
 	<div class="box">
 		<h2>Foreword</h2>
@@ -11,11 +24,8 @@
 	</div>
 	<div class="box">
 		<h2>Galleries</h2>
-<?php
-
-	$theGalleryListing->printList( -1 );
-
-?>
+    {%- set galleryPages = collections.all | eleventyNavigation('Art') %}
+    {{ galleryList( galleryPages, page.url ) | safe }}
 		<p>I may add more galleries in future so be sure to check back here from time to time!</p>
 	</div>
 </div>
@@ -25,7 +35,4 @@
 		<p>I'm fairly liberal about the usage of artwork I publish online. Much of it is under a <a href="https://creativecommons.org/">Creative Commons</a> licenses which typically means you're free to distribute those pictures as long as you credit me as the original creator (in some cases there may be restrictions on commercial use, so please be sure to check the license per picture). Some of my art is not under a <abbr title="Creative Commons">CC</abbr> license in which case I would ask you not to re-distribute it without getting my permission first. Having said that, you're most welcome to link to it (and I don't mind if you have a thumbnail copy or something like that on the page that links to it).</p>
 		<p>The bottom line is that I'm keen for my work to be seen by as many people as possible (otherwise I wouldn't be publishing it!) but I want people to know it was me who made it (also links to <a href="/">my site</a> are always appreciated). I think that's fair enough, don't you?</p>
 	</div>
-</div>	
-<?php
-	$thePageRenderer->doFooter();
-?>
+</div>

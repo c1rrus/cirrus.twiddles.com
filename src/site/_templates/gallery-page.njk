@@ -1,0 +1,49 @@
+---
+additionalCss: /art/art.css
+---
+{% extends 'page.njk' %}
+{% from 'partials/gallery-list.njk' import galleryList %}
+
+{%- set galleryPages = collections.all | eleventyNavigation('Art') %}
+
+{% block head %}
+  {{ super() }}
+  <link rel="index" href="../" />
+  {%- for gallery in galleryPages %}
+    {#- add first link (unless this is the first page) #}
+    {%- if loop.first and gallery.url != page.url %}
+      <link rel="first" href="{{ gallery.url }}" />
+    {%- endif %}
+
+    {#- add prev & next links... #}
+    {%- if gallery.url == page.url %}
+      {#- add prev link (unless this is the first page) #}
+      {%- if not loop.first %}
+        <link rel="prev" href="{{ galleryPages[(loop.index0 - 1)].url }}" />
+      {%- endif %}
+
+      {#- add next link (unless this is the last page) #}
+      {%- if not loop.last %}
+        <link rel="next" href="{{ galleryPages[(loop.index0 + 1)].url }}" />
+      {%- endif %}
+    {%- endif %}
+
+    {#- add last link (unless this is the last page) #}
+    {%- if loop.last and gallery.url != page.url  %}
+      <link rel="last" href="{{ gallery.url }}" />
+    {%- endif %}
+  {%- endfor %}
+{% endblock %}
+
+{% block main %}
+<div id="main-content">
+  {{ content | safe }}
+</div>
+<div id="secondary-content">
+	<div class="box">
+		<h2>Other galleries</h2>
+		<p>You can see more artwork by <a href="/">James Nash</a> in the following galleries:</p>
+    {{ galleryList( galleryPages, page.url ) | safe }}
+	</div>
+</div>
+{% endblock %}

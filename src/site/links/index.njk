@@ -1,8 +1,20 @@
-<?php
-	require_once("../../includes/common.inc");
-	$thePageRenderer->setThisPage( 3 ); // 3 = links
-	$thePageRenderer->doHeader();
-?>
+---
+layout: page.njk
+title: James Nash's Links
+description: James Nash's links to sites of friends, projects or just stuff he finds interesting and amusing.
+keywords:
+  - friends
+  - websites
+  - sites
+  - personal
+  - technology
+  - art
+  - interesting
+eleventyNavigation:
+  key: Links
+  order: 4
+  titleAttr: James Nash's Links
+---
 <div class="box">
 	<h2>Link love</h2>
 	<p>Here's a random selection of links of things I have done or am involved in:</p>
@@ -11,8 +23,5 @@
 		<li><a href="http://www.twiddles.com/">Twiddles</a> - <q>Coming soon</q>, honest guv'!</li>
 		<li><a href="https://shop.spreadshirt.co.uk/twiddles/">The official Twiddles shop</a>!</li>
 		<li><a href="http://adonthell.nongnu.org/">Adonthell</a>. A cool, open-source RPG adventure game.</li>
-	</ul>	
-</div>	
-<?php
-	$thePageRenderer->doFooter();
-?>
+	</ul>
+</div>
