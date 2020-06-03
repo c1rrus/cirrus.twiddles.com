@@ -1,0 +1,4 @@
+# Redirect to keep very old URL alive
+[[redirects]]
+  from = "/gfx/"
+  to = "/art/"
