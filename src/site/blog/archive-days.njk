@@ -3,6 +3,7 @@
   pagination: {
     data: "collections.blog",
     size: 1,
+    addAllPagesToCollections: true,
     before: data => data.reduce((groupedPosts, blogPost) => {
       // Each element in groupedPosts represents a day that had posts
 
@@ -41,6 +42,7 @@
     alias: 'blogPosts',
   },
   permalink: "/blog/{{ blogPosts.year }}/{{ blogPosts.urlMonth }}/{{ blogPosts.urlDay }}/index.html",
+  priority: 0.1,
 
   eleventyComputed: {
     title: (data) => {

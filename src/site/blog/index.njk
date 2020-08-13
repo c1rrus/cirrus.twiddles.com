@@ -18,6 +18,8 @@ pagination:
   size: 5
   alias: 'blogPosts'
   reverse: true
+priority: 1
+changeFreq: daily
 permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
 {% from 'partials/archive-nav.njk' import archiveNav %}

@@ -3,6 +3,7 @@
   pagination: {
     data: "collections.blog",
     size: 1,
+    addAllPagesToCollections: true,
     before: data => data.reduce((groupedPosts, blogPost) => {
       // Each element in groupedPosts represents a month that had posts
 
@@ -54,6 +55,7 @@
     alias: 'blogPosts',
   },
   permalink: "/blog/{{ blogPosts.year }}/{{ blogPosts.urlMonth }}/index.html",
+  priority: 0.2,
 
   eleventyComputed: {
     title: (data) => {

@@ -3,6 +3,7 @@
   pagination: {
     data: "collections.blog",
     size: 1,
+    addAllPagesToCollections: true,
     before: data => data.reduce((groupedPosts, blogPost) => {
       // Each element in groupedPosts represents a year that had posts
 
@@ -47,6 +48,7 @@
     alias: 'blogPosts',
   },
   permalink: "/blog/{{ blogPosts.year }}/index.html",
+  priority: 0.3,
 
   eleventyComputed: {
     title: (data) => `Blog posts from ${ data.blogPosts.year }`,
