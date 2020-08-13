@@ -1,5 +1,5 @@
 ---
-title: The cobber's children have no shoes
+title: The cobbler's children have no shoes
 canonicalUrl: https://symbianmwc08.wordpress.com/2008/01/30/demo-teaser/
 date: 2020-08-12T12:36Z
 ---
