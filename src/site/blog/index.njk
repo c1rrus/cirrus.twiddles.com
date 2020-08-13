@@ -13,11 +13,50 @@ eleventyNavigation:
   key: Blog
   order: 2
   titleAttr: James Nash on the Blog
+pagination:
+  data: "collections.blog"
+  size: 5
+  alias: 'blogPosts'
+  reverse: true
+permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
-<div class="box">
-    <h2>Blog not found</h2>
-    <p>Unfortunately I haven't gotten around to building my own blog just yet. When I eventually do, it will live here!</p>
-    <p>However, I have blogged elsewhere over the years:</p>
+{% from 'partials/archive-nav.njk' import archiveNav %}
+{% set firstPage = {
+  url: pagination.href.first if (pagination.href.first != page.url),
+  label: 'Page 1'
+} %}
+{% set prevPage = {
+  url: pagination.href.previous,
+  label: 'Page ' + (pagination.pageNumber) if pagination.href.previous else 'N/A'
+} %}
+{% set nextPage = {
+  url: pagination.href.next,
+  label: 'Page ' + (pagination.pageNumber + 2) if pagination.href.next else 'N/A'
+} %}
+{% set lastPage = {
+  url: pagination.href.last if (pagination.href.last != page.url),
+  label: 'Page ' + pagination.pages.length
+} %}
+
+<div id="main-content">
+{% for blogPost in blogPosts %}
+  <div class="box">
+    <h2><a href="{{ blogPost.url }}">{{ blogPost.data.title }}</a></h2>
+    <p>Posted on {% humanDate blogPost.date %}</p>
+  </div>
+{% endfor %}
+</div>
+
+<div id="secondary-content">
+  <div class="box">
+    <h2>Browse the blog</h2>
+    <p>You are on page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</p>
+    {{ archiveNav(null, firstPage, prevPage, nextPage, lastPage) | safe }}
+  </div>
+
+  <div class="box">
+    <h2>Elsewhere</h2>
+    <p>I have also blogged elsewhere over the years:</p>
     <ul>
         <li><a href="https://medium.com/@cirrus" rel="me">My Medium blog</a>. Mostly stuff I write about relating to my work on design systems and web development.</li>
         <li>I've published a few posts on the Wipro Digital blog:
@@ -36,4 +75,5 @@ eleventyNavigation:
             </ul>
         </li>
     </ul>
+  </div>
 </div>

@@ -1,0 +1,83 @@
+---js
+{
+  pagination: {
+    data: "collections.blog",
+    size: 1,
+    before: data => data.reduce((groupedPosts, blogPost) => {
+      // Each element in groupedPosts represents a day that had posts
+
+      // Get year, month and day of the current blogPost
+      const postDate = new Date(blogPost.date);
+      const year = postDate.getUTCFullYear();
+      const month = postDate.getUTCMonth();
+      const day = postDate.getUTCDate();
+
+      const urlMonth = month < 9 ? `0${month + 1}` : `${month + 1}`;
+      const urlDay = day < 10 ? `0${day}` : `${day}`;
+
+      // Do we already have a postsGroup for this day?
+      let postsGroup = groupedPosts.find(group => (group.year === year && group.month === month && group.day === day));
+      if (postsGroup === undefined) {
+        // If not, add an empty one
+        postsGroup = {
+          year,
+          month,
+          day,
+          urlMonth,
+          urlDay,
+          count: 0,
+
+          // No sub groups here
+          posts: [],
+        };
+        groupedPosts.push(postsGroup);
+      }
+
+      postsGroup.posts.push(blogPost);
+      postsGroup.count++;
+
+      return groupedPosts;
+    }, []),
+    alias: 'blogPosts',
+  },
+  permalink: "/blog/{{ blogPosts.year }}/{{ blogPosts.urlMonth }}/{{ blogPosts.urlDay }}/index.html",
+
+  eleventyComputed: {
+    title: (data) => {
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+        'Spetember', 'October', 'November', 'December'
+      ];
+
+      return `Blog posts from ${ data.blogPosts.day }. ${ monthNames[data.blogPosts.month] } ${ data.blogPosts.year }`;
+    },
+  },
+
+  layout: "blog-archive-page.njk",
+}
+---
+{% from 'partials/archive-nav.njk' import archiveNav %}
+
+<h2>Browse full archive by day</h2>
+{% set upPage = {
+  url:'../',
+  label: (blogPosts.month | monthName) + ' ' + blogPosts.year
+} %}
+{% set firstPage = {
+  url: pagination.href.first if (pagination.href.first != page.url),
+  label: pagination.page.first.day + '. ' + (pagination.page.first.month | monthName + " " + pagination.page.first.year)
+} %}
+{% set prevPage = {
+  url: pagination.href.previous,
+  label: pagination.page.previous.day + '. ' + (pagination.page.previous.month | monthName + " " +pagination.page.previous.year) if pagination.href.previous else 'N/A'
+} %}
+{% set nextPage = {
+  url: pagination.href.next,
+  label: pagination.page.next.day + '. ' + (pagination.page.next.month | monthName + " " + pagination.page.next.year) if pagination.href.next else 'N/A'
+} %}
+{% set lastPage = {
+  url: pagination.href.last if (pagination.href.last != page.url),
+  label: pagination.page.last.day + '. ' + (pagination.page.last.month | monthName + " " +pagination.page.last.year)
+} %}
+
+{{ archiveNav(upPage, firstPage, prevPage, nextPage, lastPage) | safe }}

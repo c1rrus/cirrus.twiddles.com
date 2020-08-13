@@ -1,0 +1,40 @@
+{% macro archiveNavLink(class, url, label, directionLabel ) %}
+  {% if url %}
+    <a href="{{ url }}" class="archive-nav-link big-link {{ class }}">
+      {% if directionLabel %}
+        <span class="archive-nav-link__dirLabel">{{ directionLabel }}</span>
+      {% endif %}
+      <span class="archive-nav-link__label">{{ label }}</span>
+    </a>
+  {% else %}
+    <span class="archive-nav-link big-link {{ class }}">
+      {% if directionLabel %}
+        <span class="archive-nav-link__dirLabel">{{ directionLabel }}</span>
+      {% endif %}
+      <span class="archive-nav-link__label">{{ label }}</span>
+    </span>
+  {% endif %}
+{% endmacro %}
+
+{% macro archiveNav(up, first, prev, next, last) %}
+  <div class="archive-nav">
+    {% if up %}
+      {{ archiveNavLink("archive-nav__up", up.url, up.label, (up.directionLabel or "Up:")) | safe }}
+    {% endif %}
+
+    <div class="archive-nav__backwards">
+      {% if first %}
+        {{ archiveNavLink("archive-nav__first", first.url, first.label, (first.directionLabel or "First:")) | safe }}
+      {% endif %}
+
+      {{ archiveNavLink("archive-nav__prev", prev.url, prev.label, (prev.directionLabel or "Previous:")) | safe }}
+    </div>
+    <div class="archive-nav__forwards">
+      {{ archiveNavLink("archive-nav__next", next.url, next.label, (next.directionLabel or "Next:")) | safe }}
+
+      {% if last %}
+        {{ archiveNavLink("archive-nav__last", last.url, last.label, (last.directionLabel or "Last:")) | safe }}
+      {% endif %}
+    </div>
+  </div>
+{% endmacro %}

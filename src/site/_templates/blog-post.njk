@@ -1,0 +1,44 @@
+{% extends 'page.njk' %}
+{% from 'partials/blog-post-link.njk' import blogPostLink %}
+{% from 'partials/archive-nav.njk' import archiveNav %}
+
+{% block head %}
+  {{ super() }}
+  <link rel="index" href="../" />
+{% endblock %}
+
+{% block subTitle %}
+<p>Posted on {% humanDate date %}</p>
+{% endblock %}
+
+{% block main %}
+<div id="main-content">
+  <div class="box post">
+    {{ content | safe }}
+  </div>
+</div>
+<div id="secondary-content">
+	<div class="box">
+    <h2>Explore the blog</h2>
+
+    {% if prevPost %}
+      <p>Previous post:</p>
+      {{ blogPostLink(prevPost) }}
+    {% endif %}
+
+    {% if nextPost %}
+      <p>Next post:</p>
+      {{ blogPostLink(nextPost) }}
+    {% endif %}
+
+
+    <h2>Explore the archive</h2>
+    <a href="../../" class="big-link">
+      Same month ({{date | monthName}} {{date | year}})
+    </a>
+    <a href="../../../" class="big-link">
+      Same year ({{date | year}})
+    </a>
+  </div>
+</div>
+{% endblock %}

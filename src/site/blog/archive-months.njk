@@ -1,0 +1,163 @@
+---js
+{
+  pagination: {
+    data: "collections.blog",
+    size: 1,
+    before: data => data.reduce((groupedPosts, blogPost) => {
+      // Each element in groupedPosts represents a month that had posts
+
+      // Get year, month and day of the current blogPost
+      const postDate = new Date(blogPost.date);
+      const year = postDate.getUTCFullYear();
+      const month = postDate.getUTCMonth();
+      const day = postDate.getUTCDate();
+      const weekDay = postDate.getDay();
+
+      const urlMonth = month < 9 ? `0${month + 1}` : `${month + 1}`;
+      const urlDay = day < 10 ? `0${day}` : `${day}`;
+
+      // Do we already have a postsGroup for this month?
+      let postsGroup = groupedPosts.find(group => (group.year === year && group.month === month));
+      if (postsGroup === undefined) {
+        // If not, add an empty one
+        postsGroup = {
+          year,
+          month,
+          urlMonth,
+          count: 0,
+          groups: [],
+        };
+        groupedPosts.push(postsGroup);
+      }
+
+      // Does it have a sub-group for this day?
+      let postsSubGroup = postsGroup.groups.find(subGroup => subGroup.id === day);
+      if (postsSubGroup === undefined) {
+        // If not, add an empty one
+        postsSubGroup = {
+          id: month,
+          title: `${blogPost.data.weekdayNames[weekDay]}, ${day}. ${blogPost.data.monthNames[month]} ${year}`,
+          count: 0,
+          url: `./${urlDay}/`,
+          posts: [],
+        };
+        postsGroup.groups.push(postsSubGroup);
+      }
+
+      // Add current post to the sub group
+      postsSubGroup.posts.push(blogPost);
+      postsSubGroup.count++;
+      postsGroup.count++;
+
+      return groupedPosts;
+    }, []),
+    alias: 'blogPosts',
+  },
+  permalink: "/blog/{{ blogPosts.year }}/{{ blogPosts.urlMonth }}/index.html",
+
+  eleventyComputed: {
+    title: (data) => {
+      const monthNames = [
+        'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
+        'Spetember', 'October', 'November', 'December'
+      ];
+
+      return `Blog posts from ${ monthNames[data.blogPosts.month] } ${ data.blogPosts.year }`;
+    },
+  },
+
+  layout: "blog-archive-page.njk",
+}
+---
+{% from 'partials/archive-nav.njk' import archiveNav %}
+
+<h2>Browse full archive by month</h2>
+{% set upPage = {
+  url:'../',
+  label: blogPosts.year
+} %}
+{% set firstPage = {
+  url: pagination.href.first if (pagination.href.first != page.url),
+  label: (pagination.page.first.month | monthName + " " + pagination.page.first.year)
+} %}
+{% set prevPage = {
+  url: pagination.href.previous,
+  label: (pagination.page.previous.month | monthName + " " +pagination.page.previous.year) if pagination.href.previous else 'N/A'
+} %}
+{% set nextPage = {
+  url: pagination.href.next,
+  label: (pagination.page.next.month | monthName + " " + pagination.page.next.year) if pagination.href.next else 'N/A'
+} %}
+{% set lastPage = {
+  url: pagination.href.last if (pagination.href.last != page.url),
+  label: (pagination.page.last.month | monthName + " " +pagination.page.last.year)
+} %}
+
+{{ archiveNav(upPage, firstPage, prevPage, nextPage, lastPage) | safe }}
+
+
+<h2>{{ blogPosts.year }} posts by month</h2>
+<ul>
+{# Iterate through each "page", each of which represents a month (from all years) in which there were posts #}
+{% for monthPosts in pagination.pages %}
+  {# previous month (which might not be this year) is assigned to lastMonthPosts #}
+  {% set lastMonthPosts = pagination.pages[loop.index0 - 1] %}
+
+  {# Check that monthPosts belongs to this page's year #}
+  {% if monthPosts.year == blogPosts.year %}
+    {#
+      If this iteration is the first of this page's year, but is not January, then
+      fill in blank entries for preceding months
+    #}
+    {% if (lastMonthPosts.year < monthPosts.year) and (monthPosts.month > 0) %}
+      {% for month in range(0, monthPosts.month) %}
+        <li>{{ month | monthName }} (no posts)</li>
+      {% endfor %}
+    {% endif %}
+
+    {#
+      If lastMonthPosts was earlier in ths page's year but we skipped some
+      months, then we need to ouptput empty entries for those months.
+    #}
+    {% if (lastMonthPosts.year == monthPosts.year) and (lastMonthPosts.month + 1 < monthPosts.month) %}
+      {% for month in range(lastMonthPosts.month + 1, monthPosts.month) %}
+        <li>{{ month | monthName }} (no posts)</li>
+      {% endfor %}
+    {% endif %}
+
+    <li>
+      {% set monthUrl = pagination.hrefs[loop.index0] %}
+      {% if monthUrl == page.url %}
+        <strong>{{ monthPosts.month | monthName }} ({{ monthPosts.count }} post{{ 's' if monthPosts.count > 1 }})</strong>
+      {% else %}
+        <a href="{{ monthUrl }}">{{ monthPosts.month | monthName }} ({{ monthPosts.count }} post{{ 's' if monthPosts.count > 1 }})</a>
+      {% endif %}
+    </li>
+
+    {#
+      Is this the last iteration, but this month was not December?
+    #}
+    {# {% if loop.last and (monthPosts.month < 11) %} #}
+      {# Output blank entries for remaining months of that year #}
+      {# {% for month in range(monthPosts.month, 12) %} #}
+        {# <li>{{ month | monthName }} (not happened yet)</li> #}
+      {# {% endfor %} #}
+    {# {% endif %} #}
+
+  {% else %}
+    {# Else: monthPosts is from a different year #}
+
+    {#
+      Was the previous iteration the last month for this page's year, but not
+      December?
+    #}
+    {% if (lastMonthPosts.year == blogPosts.year) and (lastMonthPosts.month < 11) %}
+      {# Output blank entries for remaining months of that year #}
+      {% for month in range(lastMonthPosts.month, 12) %}
+        <li>{{ month | monthName }} (no posts)</li>
+      {% endfor %}
+    {% endif %}
+
+  {% endif %}
+{% endfor %}
+</ul>
