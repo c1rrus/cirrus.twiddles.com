@@ -38,7 +38,7 @@ module.exports = {
       if (postsSubGroup === undefined) {
         // If not, add an empty one
         postsSubGroup = {
-          id: month,
+          id: day,
           title: `${weekdayName(weekDay)}, ${day}. ${monthName(month)} ${year}`,
           count: 0,
           url: `./${urlDay(day)}/`,
