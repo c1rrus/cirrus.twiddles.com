@@ -6,7 +6,7 @@ function collectionItemIndex(collection, itemUrl) {
 
 module.exports = {
   title: 'untitled',
-  permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/{{ title | slug }}/index.html",
+  permalink: "/blog/{{ page.date | date: '%Y/%m/%d' }}/{{ slug or title | slug }}/index.html",
   tags: ['blog'],
   layout: 'blog-post.njk',
   priority: 0.9,

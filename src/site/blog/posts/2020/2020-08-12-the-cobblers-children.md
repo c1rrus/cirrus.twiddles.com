@@ -1,5 +1,6 @@
 ---
-title: The cobbler's children have no shoes
+title: The cobbler's children are the worst shod
+slug: the cobblers children
 date: 2020-08-12T12:36Z
 summary: A summary of recent technical updates made to this website and a look towards its roadmap for the future.
 keywords:
@@ -8,7 +9,7 @@ keywords:
   - netlify
   - roadmap
 ---
-For someone who regularly works on other people's websites and apps, my own one is pretty old-fashioned and basic. The markup is still [XHTML](https://validator.w3.org/check?uri=referer). Since I redesigned this site in 2009, the design has barely changed (although, I did at least retrofit a responsive layout in 2017). The content has hardly been updated over that 11 year period either. I suppose it's true what they say about the cobbler's children!
+For someone who regularly works on other people's websites and apps, my own one is pretty old-fashioned and basic. The markup is still [XHTML](https://validator.w3.org/check?uri=referer). Since I redesigned this site in 2009, the design has barely changed (although, I did at least retrofit a responsive layout in 2017). The content has hardly been updated over that 11 year period either. I suppose it's true what they say about the [cobbler's children](https://en.wiktionary.org/wiki/the_cobbler%27s_children_are_the_worst_shod)!
 
 However, changes are afoot!
 
