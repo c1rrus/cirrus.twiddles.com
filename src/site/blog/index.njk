@@ -91,5 +91,18 @@ permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
     <h2>Browse the blog</h2>
     <p>You are on page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</p>
     {{ archiveNav(null, firstPage, prevPage, nextPage, lastPage) | safe }}
+
+    <h2>Browse posts by year</h2>
+    <ul>
+    {% for postYear in postYears %}
+      <li>
+        {% if postYear.postCount > 0 %}
+          <a href="{{ postYear.url }}">{{ postYear.year }} ({{ postYear.postCount }} posts)</a>
+        {% else %}
+          {{ postYear.year }} (0 posts)
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
   </div>
 </div>
