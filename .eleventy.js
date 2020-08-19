@@ -18,6 +18,8 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addFilter('weekdayName', dateFormatter.weekdayName);
   eleventyConfig.addFilter('year', dateFormatter.year);
 
+  eleventyConfig.addFilter('limit', (array, amount) => array.slice(0, amount));
+
   return {
     dir: {
       input: 'src/site',

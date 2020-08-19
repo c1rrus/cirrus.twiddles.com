@@ -34,7 +34,7 @@
   {% for postGroup in blogPosts.groups %}
   <div class="box">
     <h2>{{ postGroup.title }}</h2>
-    <ul>
+    <ul class="post-links">
     {% for post in postGroup.posts %}
       <li>{{ blogPostLink(post) }}</li>
     {% endfor %}

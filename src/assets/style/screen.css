@@ -59,6 +59,11 @@ a:hover, a:active {
 	color: #ffffff;
 }
 
+hr {
+  border: none;
+  background-color: #b6e4ff;
+  height: 1px;
+}
 
 .break {
 	clear: both;
@@ -199,6 +204,38 @@ div.box {
   display: block;
   max-width: 100%;
   margin: 0 auto 1em;
+}
+
+/* Links to blog post with title, date and summary */
+.post-link :last-child {
+  margin-bottom: 0;
+}
+
+.post-link__title {
+  font-size: 1.3em;
+  line-height: 1.25;
+}
+
+.post-link__date {
+  display: block;
+  margin-top: 0.25rem;
+  margin-bottom: 0.5rem;
+}
+
+/* List of post links */
+.post-links {
+  list-style-type: none;
+  margin: 1rem 0;
+}
+
+.post-links li {
+  margin: 0;
+}
+
+.post-links li + li {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid #aaa;
 }
 
 /* Links with button-like appearance */

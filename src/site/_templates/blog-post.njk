@@ -22,15 +22,19 @@
     {% if prevPost or nextPost %}
     <h2>Explore the blog</h2>
 
+    <ul class="post-links">
     {% if prevPost %}
-      <p>Previous post:</p>
-      {{ blogPostLink(prevPost) }}
+      <li>
+      {{ blogPostLink(prevPost, 'Previous post:') }}
+      </li>
     {% endif %}
 
     {% if nextPost %}
-      <p>Next post:</p>
-      {{ blogPostLink(nextPost) }}
+      <li>
+      {{ blogPostLink(nextPost, 'Next post:') }}
+      </li>
     {% endif %}
+    </ul>
     {% endif %}
 
 
