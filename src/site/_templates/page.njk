@@ -5,7 +5,7 @@
   {%- block head %}
 		<title>{{ title }}</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
-		<meta name="keywords" content="james, nash, personal, {{ keywords | join(', ') }}" />
+		<meta name="keywords" content="james, nash, personal, {{ (keywords | join(', ')) if keywords }}" />
 		<meta name="description" content="{{ description }}" />
 		<link rel="shortcut icon" href="/favicon.ico" />
 		<link rel="stylesheet" type="text/css" media="all" href="/style/screen.css" />
@@ -22,7 +22,10 @@
 	</head>
 	<body>
 		<div id="header">
-			<h1>{{ title }}</h1>
+      <div class="page-title">
+        <h1>{{ title }}</h1>
+        {% block subTitle %}{% endblock %}
+      </div>
 		</div>
     {%- set navPages = collections.all | eleventyNavigation %}
     {{- mainNav(navPages, page.url) | safe }}

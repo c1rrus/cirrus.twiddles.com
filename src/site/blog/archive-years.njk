@@ -1,0 +1,53 @@
+{% from 'partials/archive-nav.njk' import archiveNav %}
+
+{#- This content goes into sidebar! -#}
+<h2>Browse full archive by year</h2>
+{% set upPage = {
+  url:'../',
+  label: 'Blog'
+} %}
+{% set firstPage = {
+  url: pagination.href.first if (pagination.href.first != page.url),
+  label: pagination.page.first.year
+} %}
+{% set prevPage = {
+  url: pagination.href.previous,
+  label: pagination.page.previous.year if pagination.href.previous else 'N/A'
+} %}
+{% set nextPage = {
+  url: pagination.href.next,
+  label: pagination.page.next.year if pagination.href.next else 'N/A'
+} %}
+{% set lastPage = {
+  url: pagination.href.last if (pagination.href.last != page.url),
+  label: pagination.page.last.year
+} %}
+
+{{ archiveNav(upPage, firstPage, prevPage, nextPage, lastPage) | safe }}
+
+<h2>All years in archive</h2>
+<ul>
+{# Iterate through each "page", each of which represents a year in which there were posts #}
+{% for yearPosts in pagination.pages %}
+  {# lastYearPosts is the previous year that happened to have some posts #}
+  {% set lastYearPosts = pagination.pages[loop.index0 - 1] %}
+  {#
+    If there were years inbetween with no posts, we need to output some
+    list items for those skipped years
+  #}
+  {% if (not loop.first) and (lastYearPosts.year + 1 < yearPosts.year) %}
+    {% for year in range(lastYearPosts.year + 1, yearPosts.year) %}
+      <li>{{ year }} (no posts)</li>
+    {% endfor %}
+  {% endif %}
+  {# Now output details for this year #}
+  <li>
+    {% set yearUrl = pagination.hrefs[loop.index0] %}
+    {% if yearUrl == page.url %}
+      <strong>{{ yearPosts.year }} ({{ yearPosts.count }} post{{ 's' if yearPosts.count > 1 }})</strong>
+    {% else %}
+      <a href="{{ yearUrl }}">{{ yearPosts.year }} ({{ yearPosts.count }} post{{ 's' if yearPosts.count > 1 }})</a>
+    {% endif %}
+  </li>
+{% endfor %}
+</ul>

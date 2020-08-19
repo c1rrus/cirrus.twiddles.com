@@ -1,0 +1,92 @@
+{% from 'partials/archive-nav.njk' import archiveNav %}
+
+<h2>Browse full archive by month</h2>
+{% set upPage = {
+  url:'../',
+  label: blogPosts.year
+} %}
+{% set firstPage = {
+  url: pagination.href.first if (pagination.href.first != page.url),
+  label: (pagination.page.first.month | monthName + " " + pagination.page.first.year)
+} %}
+{% set prevPage = {
+  url: pagination.href.previous,
+  label: (pagination.page.previous.month | monthName + " " +pagination.page.previous.year) if pagination.href.previous else 'N/A'
+} %}
+{% set nextPage = {
+  url: pagination.href.next,
+  label: (pagination.page.next.month | monthName + " " + pagination.page.next.year) if pagination.href.next else 'N/A'
+} %}
+{% set lastPage = {
+  url: pagination.href.last if (pagination.href.last != page.url),
+  label: (pagination.page.last.month | monthName + " " +pagination.page.last.year)
+} %}
+
+{{ archiveNav(upPage, firstPage, prevPage, nextPage, lastPage) | safe }}
+
+
+<h2>{{ blogPosts.year }} posts by month</h2>
+<ul>
+{# Iterate through each "page", each of which represents a month (from all years) in which there were posts #}
+{% for monthPosts in pagination.pages %}
+  {# previous month (which might not be this year) is assigned to lastMonthPosts #}
+  {% set lastMonthPosts = pagination.pages[loop.index0 - 1] %}
+
+  {# Check that monthPosts belongs to this page's year #}
+  {% if monthPosts.year == blogPosts.year %}
+    {#
+      If this iteration is the first of this page's year, but is not January, then
+      fill in blank entries for preceding months
+    #}
+    {% if (lastMonthPosts.year < monthPosts.year) and (monthPosts.month > 0) %}
+      {% for month in range(0, monthPosts.month) %}
+        <li>{{ month | monthName }} (no posts)</li>
+      {% endfor %}
+    {% endif %}
+
+    {#
+      If lastMonthPosts was earlier in ths page's year but we skipped some
+      months, then we need to ouptput empty entries for those months.
+    #}
+    {% if (lastMonthPosts.year == monthPosts.year) and (lastMonthPosts.month + 1 < monthPosts.month) %}
+      {% for month in range(lastMonthPosts.month + 1, monthPosts.month) %}
+        <li>{{ month | monthName }} (no posts)</li>
+      {% endfor %}
+    {% endif %}
+
+    <li>
+      {% set monthUrl = pagination.hrefs[loop.index0] %}
+      {% if monthUrl == page.url %}
+        <strong>{{ monthPosts.month | monthName }} ({{ monthPosts.count }} post{{ 's' if monthPosts.count > 1 }})</strong>
+      {% else %}
+        <a href="{{ monthUrl }}">{{ monthPosts.month | monthName }} ({{ monthPosts.count }} post{{ 's' if monthPosts.count > 1 }})</a>
+      {% endif %}
+    </li>
+
+    {#
+      Is this the last iteration, but this month was not December?
+    #}
+    {# {% if loop.last and (monthPosts.month < 11) %} #}
+      {# Output blank entries for remaining months of that year #}
+      {# {% for month in range(monthPosts.month, 12) %} #}
+        {# <li>{{ month | monthName }} (not happened yet)</li> #}
+      {# {% endfor %} #}
+    {# {% endif %} #}
+
+  {% else %}
+    {# Else: monthPosts is from a different year #}
+
+    {#
+      Was the previous iteration the last month for this page's year, but not
+      December?
+    #}
+    {% if (lastMonthPosts.year == blogPosts.year) and (lastMonthPosts.month < 11) %}
+      {# Output blank entries for remaining months of that year #}
+      {% for month in range(lastMonthPosts.month, 12) %}
+        <li>{{ month | monthName }} (no posts)</li>
+      {% endfor %}
+    {% endif %}
+
+  {% endif %}
+{% endfor %}
+</ul>

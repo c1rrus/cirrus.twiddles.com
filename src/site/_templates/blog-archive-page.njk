@@ -1,0 +1,61 @@
+{% extends 'page.njk' %}
+{% from 'partials/blog-post-link.njk' import blogPostLink %}
+
+
+{% block head %}
+  {{ super() }}
+  <link rel="index" href="../" />
+
+  {#- add first link (unless this is the first page) #}
+  {%- if pagination.href.first != page.url %}
+    <link rel="first" href="{{ pagination.href.first }}" />
+  {%- endif %}
+
+  {#- add prev link (unless this is the first page) #}
+  {%- if pagination.href.previous %}
+    <link rel="prev" href="{{ pagination.href.previous }}" />
+  {%- endif %}
+
+  {#- add next link (unless this is the last page) #}
+  {%- if pagination.href.next %}
+    <link rel="next" href="{{ pagination.href.next }}" />
+  {%- endif %}
+
+  {#- add last link (unless this is the last page) #}
+  {%- if pagination.href.last != page.url %}
+    <link rel="last" href="{{ pagination.href.last }}" />
+  {%- endif %}
+
+{% endblock %}
+
+
+{% block main %}
+<div id="main-content">
+  {% for postGroup in blogPosts.groups %}
+  <div class="box">
+    <h2>{{ postGroup.title }}</h2>
+    <ul class="post-links">
+    {% for post in postGroup.posts %}
+      <li>{{ blogPostLink(post) }}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+    <p>View posts from <a href="{{ postGroup.url }}">{{ postGroup.title }}</a> by themselves</p>
+  </div>
+  {% else %}
+    {# No groups, means we just have posts directly #}
+    <div class="box">
+      <ul>
+      {% for post in blogPosts.posts %}
+        <li>{{ blogPostLink(post) }}</li>
+      {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</div>
+<div id="secondary-content">
+	<div class="box">
+    {{ content | safe }}
+  </div>
+</div>
+{% endblock %}

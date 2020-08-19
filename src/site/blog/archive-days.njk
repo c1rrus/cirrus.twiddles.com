@@ -1,0 +1,25 @@
+{% from 'partials/archive-nav.njk' import archiveNav %}
+
+<h2>Browse full archive by day</h2>
+{% set upPage = {
+  url:'../',
+  label: (blogPosts.month | monthName) + ' ' + blogPosts.year
+} %}
+{% set firstPage = {
+  url: pagination.href.first if (pagination.href.first != page.url),
+  label: pagination.page.first.day + '. ' + (pagination.page.first.month | monthName + " " + pagination.page.first.year)
+} %}
+{% set prevPage = {
+  url: pagination.href.previous,
+  label: pagination.page.previous.day + '. ' + (pagination.page.previous.month | monthName + " " +pagination.page.previous.year) if pagination.href.previous else 'N/A'
+} %}
+{% set nextPage = {
+  url: pagination.href.next,
+  label: pagination.page.next.day + '. ' + (pagination.page.next.month | monthName + " " + pagination.page.next.year) if pagination.href.next else 'N/A'
+} %}
+{% set lastPage = {
+  url: pagination.href.last if (pagination.href.last != page.url),
+  label: pagination.page.last.day + '. ' + (pagination.page.last.month | monthName + " " +pagination.page.last.year)
+} %}
+
+{{ archiveNav(upPage, firstPage, prevPage, nextPage, lastPage) | safe }}

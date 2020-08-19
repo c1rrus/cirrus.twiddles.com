@@ -3,6 +3,9 @@ layout: page.njk
 title: James Nash on the Blog
 description: Blog posts by James Nash. Mostly musings and ramblings about mobile phone technology.
 keywords:
+  - blog
+  - articles
+  - writing
   - feed
   - twitter
   - mobile
@@ -13,11 +16,54 @@ eleventyNavigation:
   key: Blog
   order: 2
   titleAttr: James Nash on the Blog
+pagination:
+  data: "collections.blog"
+  size: 5
+  alias: 'blogPosts'
+  reverse: true
+priority: 1
+changeFreq: daily
+permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}"
 ---
-<div class="box">
-    <h2>Blog not found</h2>
-    <p>Unfortunately I haven't gotten around to building my own blog just yet. When I eventually do, it will live here!</p>
-    <p>However, I have blogged elsewhere over the years:</p>
+{% from 'partials/blog-post-link.njk' import blogPostLink %}
+{% from 'partials/archive-nav.njk' import archiveNav %}
+{% set firstPage = {
+  url: pagination.href.first if (pagination.href.first != page.url),
+  label: 'Page 1'
+} %}
+{% set prevPage = {
+  url: pagination.href.previous,
+  label: 'Page ' + (pagination.pageNumber) if pagination.href.previous else 'N/A'
+} %}
+{% set nextPage = {
+  url: pagination.href.next,
+  label: 'Page ' + (pagination.pageNumber + 2) if pagination.href.next else 'N/A'
+} %}
+{% set lastPage = {
+  url: pagination.href.last if (pagination.href.last != page.url),
+  label: 'Page ' + pagination.pages.length
+} %}
+
+<div id="main-content">
+  <div class="box">
+    <h2>
+      {% if pagination.pageNumber == 0 %}
+        Most recent blog posts
+      {% else %}
+        Page {{ pagination.pageNumber + 1 }} of older blog posts
+      {% endif %}
+    </h2>
+    <ul class="post-links">
+    {% for blogPost in blogPosts %}
+      <li>{{ blogPostLink(blogPost) | safe }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+
+  {% if pagination.pageNumber == 0 %}
+  <div class="box">
+    <h2>Elsewhere</h2>
+    <p>I have also blogged elsewhere over the years:</p>
     <ul>
         <li><a href="https://medium.com/@cirrus" rel="me">My Medium blog</a>. Mostly stuff I write about relating to my work on design systems and web development.</li>
         <li>I've published a few posts on the Wipro Digital blog:
@@ -36,4 +82,27 @@ eleventyNavigation:
             </ul>
         </li>
     </ul>
+  </div>
+  {% endif %}
+</div>
+
+<div id="secondary-content">
+  <div class="box">
+    <h2>Browse the blog</h2>
+    <p>You are on page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</p>
+    {{ archiveNav(null, firstPage, prevPage, nextPage, lastPage) | safe }}
+
+    <h2>Browse posts by year</h2>
+    <ul>
+    {% for postYear in postYears %}
+      <li>
+        {% if postYear.postCount > 0 %}
+          <a href="{{ postYear.url }}">{{ postYear.year }} ({{ postYear.postCount }} posts)</a>
+        {% else %}
+          {{ postYear.year }} (0 posts)
+        {% endif %}
+      </li>
+    {% endfor %}
+    </ul>
+  </div>
 </div>

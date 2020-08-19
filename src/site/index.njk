@@ -17,7 +17,10 @@ eleventyNavigation:
   key: Home
   order: 1
   titleAttr: James Nash - arty phone geek
+priority: 1
+changeFreq: weekly
 ---
+{% from 'partials/blog-post-link.njk' import blogPostLink %}
 <div id="main-content">
 	<div class="box">
 		<h2>James Nash in a nutshell</h2>
@@ -30,6 +33,16 @@ eleventyNavigation:
 		</ul>
 		<p>So there you go, that's me. I hope you enjoy the <a href="/blog/">blog</a>, <a href="/art/">art</a> &amp; <a href="/links/">links</a> sections of my site!</p>
 	</div>
+  <div class="box">
+    <h2>Most recent blog posts</h2>
+    <ul class="post-links">
+    {% for blogPost in collections.blog | reverse | limit(3) %}
+      <li>{{ blogPostLink(blogPost) | safe }}</li>
+    {% endfor %}
+    </ul>
+    <hr>
+    <p>Browse all posts on <a href="/blog/">the blog</a></p>
+  </div>
 	<div class="box">
 		<h2>James Nash on the social intertubes</h2>
 		<p>Find me, follow me and poke me on...</p>
