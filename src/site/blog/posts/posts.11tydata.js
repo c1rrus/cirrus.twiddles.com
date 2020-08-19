@@ -1,3 +1,5 @@
+const { year, urlMonth, urlDay } = require('../../../utils/date-formatter');
+
 function collectionItemIndex(collection, itemUrl) {
   return collection.findIndex(colItem => colItem.url === itemUrl);
 }
@@ -11,6 +13,18 @@ module.exports = {
   // changeFreq: 'monthly',
 
   eleventyComputed: {
+    description: (data) => data.description || data.summary,
+
+    eleventyNavigation: (data) => {
+      const index = collectionItemIndex(data.collections.blog, data.page.url);
+      return {
+        key: `Blog-post-${ index }`,
+        order: index,
+        title: data.title,
+        parent: `Blog-${ year(data.date) }-${ urlMonth(data.date) }-${ urlDay(data.date) }`,
+      };
+    },
+
     prevPost: (data) => {
       const currentPostIndex = collectionItemIndex(data.collections.blog, data.page.url);
       if (currentPostIndex !== -1 && currentPostIndex > 0) {

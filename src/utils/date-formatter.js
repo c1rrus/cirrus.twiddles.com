@@ -51,13 +51,30 @@ function humanUTCDate(date) {
   return `${weekdayName(date)}, ${monthDay(date)}. ${monthName(date)} ${year(date)}`;
 }
 
-module.exports = {
-  monthNames,
-  weekdayNames,
+function urlMonth(monthIndexOrDate) {
+  let monthIndex = monthIndexOrDate;
+  if (typeof monthIndex !== 'number') {
+    monthIndex = toDate(monthIndexOrDate).getUTCMonth();
+   }
+   return monthIndex < 9 ? `0${monthIndex + 1}` : `${monthIndex + 1}`;
+}
 
+function urlDay(dayOrDate) {
+  let day = dayOrDate;
+  if (typeof day !== 'number') {
+    day = toDate(dayOrDate).getUTCDate();
+   }
+   return day < 10 ? `0${day}` : `${day}`;;
+}
+
+
+module.exports = {
   monthDay,
   monthName,
   weekdayName,
   year,
   humanUTCDate,
+
+  urlDay,
+  urlMonth,
 };

@@ -1,4 +1,5 @@
 {% macro blogPostLink(blogPost) %}
   <strong><a href="{{ blogPost.url }}">{{ blogPost.data.title }}</a></strong>
-  <p>Posted on {% humanDate blogPost.date %}</p>
+  <p><small>Posted on {% humanDate blogPost.date %}</small></p>
+  <p>{{ blogPost.data.summary }}
 {% endmacro %}

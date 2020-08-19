@@ -19,6 +19,7 @@
 </div>
 <div id="secondary-content">
 	<div class="box">
+    {% if prevPost or nextPost %}
     <h2>Explore the blog</h2>
 
     {% if prevPost %}
@@ -29,6 +30,7 @@
     {% if nextPost %}
       <p>Next post:</p>
       {{ blogPostLink(nextPost) }}
+    {% endif %}
     {% endif %}
 
 
