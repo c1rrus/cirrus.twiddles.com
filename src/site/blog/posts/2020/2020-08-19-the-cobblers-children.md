@@ -1,7 +1,7 @@
 ---
 title: The cobbler's children are the worst shod
 slug: the cobblers children
-date: 2020-08-12T12:36Z
+date: 2020-08-19T19:49Z
 summary: A summary of recent technical updates made to this website and a look towards its roadmap for the future.
 keywords:
   - first post
