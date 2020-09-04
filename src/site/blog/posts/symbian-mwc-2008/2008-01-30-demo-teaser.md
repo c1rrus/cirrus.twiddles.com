@@ -2,6 +2,11 @@
 title: Demo teaser
 canonicalUrl: https://symbianmwc08.wordpress.com/2008/01/30/demo-teaser/
 date: 2008-01-30T15:35Z
+summary: Teaser for one of Symbian's tech demos at Mobile World Congress 2008
+keywords:
+  - demo
+  - screenplay
+  - video
 ---
 Pssst! Over here...
 

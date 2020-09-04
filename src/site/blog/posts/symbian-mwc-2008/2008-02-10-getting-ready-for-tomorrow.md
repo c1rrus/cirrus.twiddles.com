@@ -2,6 +2,9 @@
 title: Getting ready for tomorrow...
 canonicalUrl: https://symbianmwc08.wordpress.com/2008/02/10/getting-ready-for-tomorrow/
 date: 2008-02-10T23:42Z
+summary: Preview of Symbian's stand on the eve of MWC 2008
+keywords:
+  - stand
 ---
 ![Photo collage of the "Symbian" sign above the stand, a lit-up rotating cube on the stand and a close-up of some jellybeans](/media/symbian-mwc-2008/standmix1.jpg)
 

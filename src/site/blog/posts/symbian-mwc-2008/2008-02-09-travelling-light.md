@@ -2,6 +2,15 @@
 title: Travelling light
 canonicalUrl: https://symbianmwc08.wordpress.com/2008/02/09/travelling-light/
 date: 2008-02-09T01:12Z
+summary: Comparing travelling with a smartphone in 2008 to a whole bag of gadgets in 2001
+keywords:
+  - travel
+  - gadgets
+  - minidisc
+  - phone
+  - gameboy
+  - camera
+  - convergence
 ---
 Dotsisx did an interesting article titled “[Math à la N95 8GB](http://dotsisx.blogspot.com/2008/01/math-la-n95-8gb.html)” a while ago which illustrated all the things her Nokia N95 8GB could replace.
 
