@@ -1,5 +1,6 @@
 ---
 title: "Exclusive: Nokia N00"
+slug: nokia n00
 canonicalUrl: https://symbianmwc08.wordpress.com/2008/02/12/exclusive-nokia-n00/
 date: 2008-02-12T23:45Z
 summary: Phone from the future, or just an early prototype?
