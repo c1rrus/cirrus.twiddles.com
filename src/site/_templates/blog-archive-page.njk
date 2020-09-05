@@ -45,7 +45,7 @@
   {% else %}
     {# No groups, means we just have posts directly #}
     <div class="box">
-      <ul>
+      <ul class="post-links">
       {% for post in blogPosts.posts %}
         <li>{{ blogPostLink(post) }}</li>
       {% endfor %}
