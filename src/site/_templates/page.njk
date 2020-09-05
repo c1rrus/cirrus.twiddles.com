@@ -18,6 +18,9 @@
     {%- else %}
     <link rel="home" href="/" />
     {%- endif %}
+    {%- if canonicalUrl %}
+    <link rel="canonical" href="{{ canonicalUrl }}" />
+    {%- endif %}
   {%- endblock %}
 	</head>
 	<body>

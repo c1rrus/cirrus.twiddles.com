@@ -63,16 +63,6 @@
       {% endif %}
     </li>
 
-    {#
-      Is this the last iteration, but this month was not December?
-    #}
-    {# {% if loop.last and (monthPosts.month < 11) %} #}
-      {# Output blank entries for remaining months of that year #}
-      {# {% for month in range(monthPosts.month, 12) %} #}
-        {# <li>{{ month | monthName }} (not happened yet)</li> #}
-      {# {% endfor %} #}
-    {# {% endif %} #}
-
   {% else %}
     {# Else: monthPosts is from a different year #}
 
@@ -82,7 +72,7 @@
     #}
     {% if (lastMonthPosts.year == blogPosts.year) and (lastMonthPosts.month < 11) %}
       {# Output blank entries for remaining months of that year #}
-      {% for month in range(lastMonthPosts.month, 12) %}
+      {% for month in range(lastMonthPosts.month + 1, 12) %}
         <li>{{ month | monthName }} (no posts)</li>
       {% endfor %}
     {% endif %}
