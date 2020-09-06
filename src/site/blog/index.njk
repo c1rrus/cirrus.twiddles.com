@@ -62,6 +62,14 @@ permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
 
   {% if pagination.pageNumber == 0 %}
   <div class="box">
+    <h2>Collections</h2>
+    {% for blogCollection in collections.blogCollections %}
+      <div>
+        <strong><a href="{{ blogCollection.url }}">{{ blogCollection.data.title }}</a></strong>
+        {{ blogCollection.templateContent | safe }}
+      </div>
+    {% endfor %}
+
     <h2>Elsewhere</h2>
     <p>I have also blogged elsewhere over the years:</p>
     <ul>
@@ -77,7 +85,6 @@ permalink: "blog/{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber
         <li>Some really old stuff I did while working at Symbian:
             <ul>
                 <li><a href="https://smartphoneshow.wordpress.com/">Symbian Smartphone Show Blog</a>. Coverage of the 2008 Smartphone Show.</li>
-                <li><a href="https://symbianmwc08.wordpress.com/">Symbian @ MWC 2008</a>. Coverage of the 2008 Mobile World Congress.</li>
                 <li><a href="https://web.archive.org/web/20110202185319/http://blog.symbian.org/">Symbian Foundation Blog</a>. (Now defunct. I wrote some of the original posts when the blog started and also created the <a href="https://web.archive.org/web/20090405043504/http://blog.symbian.org:80/2009/04/01/symbian-based-toaster-announced/">Symbian Toaster April Fool's</a>)</li>
             </ul>
         </li>

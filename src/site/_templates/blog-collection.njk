@@ -1,0 +1,57 @@
+{% extends 'page.njk' %}
+{% from 'partials/blog-post-link.njk' import blogPostLink %}
+{% from 'partials/archive-nav.njk' import archiveNav %}
+{% set parentPage = {
+  url: '../',
+  label: 'All blog collections'
+} %}
+{% set firstPage = {
+  url: pagination.href.first if (pagination.href.first != page.url),
+  label: 'Page 1'
+} %}
+{% set prevPage = {
+  url: pagination.href.previous,
+  label: 'Page ' + (pagination.pageNumber) if pagination.href.previous else 'N/A'
+} %}
+{% set nextPage = {
+  url: pagination.href.next,
+  label: 'Page ' + (pagination.pageNumber + 2) if pagination.href.next else 'N/A'
+} %}
+{% set lastPage = {
+  url: pagination.href.last if (pagination.href.last != page.url),
+  label: 'Page ' + pagination.pages.length
+} %}
+
+
+{% block main %}
+<div id="main-content">
+  <div class="box">
+    <h2>Description</h2>
+    {{ content | safe }}
+
+    <h2>Original location</h2>
+    {% if original.active %}
+      <a href="{{ original.url }}">{{ original.url }}</a>
+    {% else %}
+      {{ original.url }} (no longer online)
+    {% endif %}
+  </div>
+
+  <div class="box">
+    <h2>Blog posts in this collection (page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }})</h2>
+    <ul class="post-links">
+    {% for blogPost in blogCollection %}
+      <li>{{ blogPostLink(blogPost) | safe }}</li>
+    {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<div id="secondary-content">
+  <div class="box">
+    <h2>Browse posts in this collection</h2>
+    <p>You are on page {{ pagination.pageNumber + 1 }} of {{ pagination.pages.length }}</p>
+    {{ archiveNav(parentPage, firstPage, prevPage, nextPage, lastPage) | safe }}
+  </div>
+</div>
+{% endblock %}

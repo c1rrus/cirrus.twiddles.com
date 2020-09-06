@@ -1,8 +1,5 @@
 const { year, urlMonth, urlDay } = require('../../../utils/date-formatter');
-
-function collectionItemIndex(collection, itemUrl) {
-  return collection.findIndex(colItem => colItem.url === itemUrl);
-}
+const { collectionItemIndex } = require('../../../utils/collection-utils');
 
 module.exports = {
   title: 'untitled',

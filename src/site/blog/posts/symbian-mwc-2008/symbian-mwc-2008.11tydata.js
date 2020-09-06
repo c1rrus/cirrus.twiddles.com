@@ -3,6 +3,10 @@
 const postsComputedData = require('../posts.11tydata').eleventyComputed;
 
 module.exports = {
+  tags: [
+    'blog',
+    'symbianMwc2008'
+  ],
 
   eleventyComputed: {
     ...postsComputedData,

@@ -1,0 +1,18 @@
+---
+title: Blog post collections
+tags: # Exclude index page from collection
+eleventyNavigation:
+  key: Blog-Collections
+  order: 0
+  parent: Blog
+  title: Blog Collections
+layout: page.njk
+---
+<div id="main-content">
+{% for blogCollection in collections.blogCollections %}
+  <div class="box">
+    <h2><a href="{{ blogCollection.url }}">{{ blogCollection.data.title }}</a></h2>
+    {{ blogCollection.templateContent | safe }}
+  </div>
+{% endfor %}
+</div>

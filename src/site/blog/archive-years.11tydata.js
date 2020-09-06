@@ -59,7 +59,7 @@ module.exports = {
 
     eleventyNavigation: (data) => ({
       key: `Blog-${ data.blogPosts.year }`,
-      order: data.pagination.pageNumber,
+      order: data.pagination.pageNumber + 1, // we use 0 for "collections"
       title: data.title,
       parent: `Blog`
     }),
