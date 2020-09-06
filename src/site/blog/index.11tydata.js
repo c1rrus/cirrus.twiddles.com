@@ -3,6 +3,15 @@ const { year } = require('../../utils/date-formatter');
 module.exports = {
 
   eleventyComputed: {
+    // Prevent page 2 & onwards from being indexed.
+    robots: (data) => {
+      if (data.pagination && data.pagination.pageNumber > 0) {
+        return {
+          noindex: true,
+        };
+      }
+    },
+
     /*
       [ { year, postCount, url } ]
     */
