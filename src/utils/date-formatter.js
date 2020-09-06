@@ -1,6 +1,6 @@
 const monthNames = [
   'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August',
-  'Spetember', 'October', 'November', 'December'
+  'September', 'October', 'November', 'December'
 ];
 
 function toDate(stringOrDate) {
