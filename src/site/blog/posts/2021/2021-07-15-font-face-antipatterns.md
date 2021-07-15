@@ -1,6 +1,6 @@
 ---
 title: "A @font-face anti-pattern"
-date: 2020-09-07T14:45Z
+date: 2021-07-15T22:07Z
 summary: How to make working with different weights and styles of the same font in CSS easy, by avoiding a common @font-face anti-pattern.
 keywords:
   - css
