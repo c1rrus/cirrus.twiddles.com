@@ -23,8 +23,8 @@ li {
 	padding: 0;
 }
 
-p, li {
-	line-height: 1.4em;
+p, li, pre {
+	line-height: 1.4;
 }
 
 h2 {
@@ -63,6 +63,10 @@ hr {
   border: none;
   background-color: #b6e4ff;
   height: 1px;
+}
+
+code {
+  font-size: 1.25em;
 }
 
 .break {

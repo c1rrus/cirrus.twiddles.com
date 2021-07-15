@@ -1,0 +1,28 @@
+---
+title: Faux bold font example
+layout: html5.njk
+---
+<style>
+  @font-face {
+    font-family: SuperFancyFont-bold;
+    src: url('LatoLatin-Bold.woff2') format('woff2');
+  }
+
+  @font-face {
+    font-family: SuperFancyFont-regular;
+    src: url('LatoLatin-Regular.woff2') format('woff2');
+  }
+
+  .card {
+    font-family: SuperFancyFont-regular;
+  }
+
+  .card__title {
+    font-family: SuperFancyFont-bold;
+    font-size: 1.5rem;
+  }
+</style>
+
+<div class="card__title">I will appear in SuperFancyFont in bold</div>
+
+<h2 class="card__title">I will appear in SuperFancyFont, but what weight?</h2>
