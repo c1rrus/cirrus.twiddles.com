@@ -1,7 +1,6 @@
 const { collectionItemIndex } = require('../../../utils/collection-utils');
 
 module.exports = {
-  tags: ['blogCollections'],
   layout: 'blog-collection.njk',
 
   eleventyComputed: {
