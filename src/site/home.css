@@ -14,11 +14,11 @@
 }
 
 .social {
-	list-style-type: none;	
+	list-style-type: none;
 }
 
 .social li {
-	background: #434343 url('style/boxbg.jpg') no-repeat 50% 0;	
+	background: #434343 url('style/boxbg.jpg') no-repeat 50% 0;
 }
 
 .social li a {
@@ -47,19 +47,11 @@
 }
 
 #twitter {
-	background: url('twitter.jpg') no-repeat 2px 2px;	
+	background: url('twitter.png') no-repeat 2px 2px;
 }
 
-#facebook {
-	background: url('facebook.jpg') no-repeat 2px 2px;	
-}
-
-#flickr {
-	background: url('flickr.jpg') no-repeat 2px 2px;	
-}
-
-#delicious {
-	background: url('delicious.jpg') no-repeat 2px 2px;	
+#mastodon {
+	background: url('mastodon.png') no-repeat 2px 2px;
 }
 
 #badges {
