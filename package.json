@@ -24,9 +24,9 @@
   },
   "homepage": "https://github.com/c1rrus/cirrus.twiddles.com#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy": "^2.0.1",
     "@11ty/eleventy-navigation": "^0.3.3",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
-    "del-cli": "^4.0.1"
+    "del-cli": "^5.0.0"
   }
 }
