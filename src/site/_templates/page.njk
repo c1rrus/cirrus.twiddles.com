@@ -18,9 +18,7 @@
     {%- else %}
     <link rel="home" href="/" />
     {%- endif %}
-    {%- if canonicalUrl %}
-    <link rel="canonical" href="{{ canonicalUrl }}" />
-    {%- endif %}
+    <link rel="canonical" href="{% if canonicalUrl %}{{ canonicalUrl }}{% else %}{{ site.url }}{{ page.url | url }}{% endif %}" />
     {%- if robots.nofollow or robots.noindex %}
     <meta name="robots" content="{{ 'nofollow' if robots.nofollow }}{{ ', ' if (robots.nofollow and robots.noindex) }}{{ 'noindex' if robots.noindex }}">
     {%- endif %}
