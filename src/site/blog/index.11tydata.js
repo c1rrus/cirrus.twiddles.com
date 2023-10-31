@@ -36,7 +36,7 @@ module.exports = {
           postYears.push({
             year: currentYear,
             postCount: 1,
-            url: `./${currentYear}/`,
+            url: `/blog/${currentYear}/`,
           })
 
           // Update lastEncounteredYear for next iteration
