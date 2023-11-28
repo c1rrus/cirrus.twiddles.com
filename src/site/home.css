@@ -46,8 +46,8 @@
 	background: url('linkedin.jpg') no-repeat 50% 0;
 }
 
-#twitter {
-	background: url('twitter.png') no-repeat 2px 2px;
+#feed {
+	background: url('feed-icon.png') no-repeat 2px 2px;
 }
 
 #mastodon {

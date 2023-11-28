@@ -22,6 +22,7 @@
     {%- if robots.nofollow or robots.noindex %}
     <meta name="robots" content="{{ 'nofollow' if robots.nofollow }}{{ ', ' if (robots.nofollow and robots.noindex) }}{{ 'noindex' if robots.noindex }}">
     {%- endif %}
+    <link rel="alternate" type="application/atom+xml" href="https://cirrus.twiddles.com/feed.atom" />
   {%- endblock %}
 	</head>
 	<body>
