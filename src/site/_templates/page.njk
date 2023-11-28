@@ -3,7 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-GB">
 	<head profile="http://gmpg.org/xfn/11">
   {%- block head %}
-		<title>{{ title }}</title>
+		<title>{% if customTitle %}{{ customTitle }}{% else %}{{ title }} | Cirrus's Realm{% endif %}</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="keywords" content="james, nash, personal, {{ (keywords | join(', ')) if keywords }}" />
 		<meta name="description" content="{{ description }}" />
