@@ -9,7 +9,6 @@ body {
 
 p {
 	margin: 0 0 1.2em 0;
-	text-align: justify;
 }
 
 ul, ol, dl {
@@ -66,6 +65,15 @@ hr {
 
 code {
   font-size: 1.25em;
+}
+
+figure {
+  margin: 0 0 1.2em 0;
+}
+
+figcaption {
+  text-align: center;
+  font-size: smaller;
 }
 
 .break {
@@ -207,6 +215,10 @@ div.box {
   display: block;
   max-width: 100%;
   margin: 0 auto 1em;
+}
+
+.post figure img {
+  margin-bottom: 0.5em;
 }
 
 /* Links to blog post with title, date and summary */
