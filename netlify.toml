@@ -2,3 +2,8 @@
 [[redirects]]
   from = "/gfx/"
   to = "/art/"
+
+# Preserve some wonky, old URLs
+[[redirects]]
+  from = "/blog/2021/07/15/a-@font-face-anti-pattern/"
+  to = "/blog/2021/07/15/font-face-anti-pattern/"
