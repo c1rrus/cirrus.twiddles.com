@@ -128,25 +128,6 @@ div.box {
 	font-size: 0.7em;
 }
 
-.twidnet {
-	text-align: right;
-	width: 150px;
-	float: right;
-	margin: 0 0 1em 1em;
-	padding: 0;
-}
-
-.twidnet a {
-	display: block;
-	margin: 0;
-	padding: 12px 55px 0 0;
-	background: url('twidnet.jpg') no-repeat top right;
-	min-height: 60px;
-	font-size: 1.3em;
-	text-decoration: none;
-}
-
-
 /* Nav links */
 #navigation {
 	/* layout */
