@@ -9,14 +9,14 @@ keywords:
   - website
 ---
 <figure>
-  <img alt="A dark, red-tinted, onimous landscape on the left and a bright, blue-tinted, sun-lit icescape on the right are separated by a sea." src="/media/2023/back-to-the-old-skool/cirrus_realm.jpg">
+  <img alt="A dark, red-tinted, onimous landscape on the left and a bright, blue-tinted, sun-lit icescape on the right are separated by a sea." src="/media/2023/back-to-the-old-skool/cirrus_realm.jpg" width="1600" height="550">
   <figcaption>Artwork I made sometime in the early 2000's titled "Cirrus's Realm"</figcaption>
 </figure>
 
 As of today, I've renamed this site (back) to Cirrus's Realm. When I originally created my little slice of cyberspace in 2002, it was titled "Cirrus's Realm" because "cirrus" was - and still is - my go-to username online, and I liked the idea that visiting my site would be like entering some kind of fantastical realm. As you can see below, it fell a bit short of that vision. Nevertheless, it was _my_ site. Back then, it even ran on my own web-server, which I had built myself.
 
 <figure>
-  <img alt="Screenshot of a webpage titled 'Cirrus's Realm'. Below the title graphic it says: Hi there! My name is James Nash and this is my personal website! It's very very primitive at the moment. That's because I'm quite busy and don't have time to make anything better. Eventually I promise I will make a dead cool kick-ass, super-slick-XHTML-compliant website! you just have to be (very) patient!" src="/media/2023/back-to-the-old-skool/cirrus-realm-old.jpg">
+  <img alt="Screenshot of a webpage titled 'Cirrus's Realm'. Below the title graphic it says: Hi there! My name is James Nash and this is my personal website! It's very very primitive at the moment. That's because I'm quite busy and don't have time to make anything better. Eventually I promise I will make a dead cool kick-ass, super-slick-XHTML-compliant website! you just have to be (very) patient!" src="/media/2023/back-to-the-old-skool/cirrus-realm-old.jpg" width="595" height="468">
   <figcaption>This website, as it originally looked ca. 2002</figcaption>
 </figure>
 
