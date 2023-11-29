@@ -5,14 +5,14 @@ const postsComputedData = require('../posts.11tydata').eleventyComputed;
 module.exports = {
   tags: [
     'blog',
-    'symbianMwc2008'
+    'smartphoneShow2008'
   ],
 
   eleventyComputed: {
     ...postsComputedData,
 
     keywords: data => {
-      const deduped = new Set(['symbian', 'mwc', 'mobile world congress', 'mobile', 'smartphone', 'barcelona']);
+      const deduped = new Set(['symbian', 'smartphone show', 'earls court', 'london', 'mobile', 'smartphone']);
       if (data.keywords) {
         data.keywords.forEach(keyword => deduped.add(keyword));
       }
