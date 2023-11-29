@@ -12,7 +12,7 @@ I’ve knocked up a quick’n’dirty widget on [WidSets.com](https://web.archiv
 
 ![Screenshot of the Symbian @ MWC 2008 widget, listing posts from the blog](/media/symbian-mwc-2008/widget.png)
 
-“But what on earth are widgets and WidSets and why are they wicked?” I hear you ask. Well, widgets are generally miniature programs that perform a specific task (often they monitor something like weather, stock prices or a blog) which run within a bigger program called the [widget engine](http://en.wikipedia.org/wiki/Widget_engine).
+“But what on earth are widgets and WidSets and why are they wicked?” I hear you ask. Well, widgets are generally miniature programs that perform a specific task (often they monitor something like weather, stock prices or a blog) which run within a bigger program called the [widget engine](https://en.wikipedia.org/wiki/Widget_engine).
 
 WidSets is a widget engine written in Java that runs on mobile phones (including, of course, many Symbian OS-based ones :P). It’s free to download, straight-forward to use and, as I have now discovered, making your own widgets is a piece of cake too!
 

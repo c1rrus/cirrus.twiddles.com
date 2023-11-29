@@ -13,7 +13,7 @@ The Symbian stand is up. The cube is lit and rotating. The jelly bean dispenser 
 
 ![Photo collage of a coffee stand with the barista and some close-ups of Symbian-branded lip balm](/media/symbian-mwc-2008/standmix2.jpg)
 
-...The [coffee](http://symbian3gsm07.wordpress.com/2007/02/15/kings-of-coffee/) machine is present. The [lip balm](https://symbianmwc08.wordpress.com/2008/01/30/smile-and-the-world-smiles-with-you-apparently/) is ready...
+...The [coffee](https://symbian3gsm07.wordpress.com/2007/02/15/kings-of-coffee/) machine is present. The [lip balm](https://symbianmwc08.wordpress.com/2008/01/30/smile-and-the-world-smiles-with-you-apparently/) is ready...
 
 I think we’re ready to go!
 
