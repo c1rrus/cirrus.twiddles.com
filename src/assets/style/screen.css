@@ -234,13 +234,13 @@ div.box {
   margin: 0;
 }
 
-.youtube-embed {
+.video-embed {
   width: 100%;
   position: relative;
   padding-top: 56.25%;
 }
 
-.youtube-embed iframe {
+.video-embed iframe {
   display: block;
   position: absolute;
   top: 0;
