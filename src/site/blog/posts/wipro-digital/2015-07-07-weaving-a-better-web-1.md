@@ -60,4 +60,4 @@ Whatever control we thought we had was an illusion. Back when the world was domi
 
 However, what we lack in control, we gain in flexibility. The Web gives us the building blocks to create experiences that adapt to the needs of our users on screens of any size _and beyond_!
 
-Continue reading [part 2 of “Weaving a Better Web”](/blog/2015/07/07/weaving-a-better-web-2/).
+Continue reading [part 2 of “Weaving a Better Web”](/blog/2015/07/14/weaving-a-better-web-2/).
