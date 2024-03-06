@@ -233,6 +233,10 @@ div.box {
   text-align: left;
 }
 
+.scrollable {
+  overflow-y: auto;
+}
+
 .post caption {
   text-align: left;
   line-height: 1.4;
