@@ -5,6 +5,12 @@
 {% block head %}
   {{ super() }}
   <link rel="index" href="../" />
+  {% if ogp.image %}
+  <meta property="og:title" content="{{ title }}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ site.url }}{{ page.url | url }}" />
+  <meta property="og:image" content="{{ site.url }}{{ ogp.image | url }}" />
+  {% endif %}
 {% endblock %}
 
 {% block subTitle %}

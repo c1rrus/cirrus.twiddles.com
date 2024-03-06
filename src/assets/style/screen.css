@@ -218,6 +218,35 @@ div.box {
   margin: 0.4em 0 0.25em 1em;
 }
 
+.post table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.2em;
+  overflow-x: auto;
+}
+
+.post td,
+.post th {
+  border: 1px solid currentColor;
+  padding: 0.25em 0.5em;
+  vertical-align: top;
+  text-align: left;
+}
+
+.post caption {
+  text-align: left;
+  line-height: 1.4;
+  margin-bottom: 0.25em;
+}
+
+ul.compact {
+  margin: 0;
+}
+
+.compact li {
+  margin: 0 0 0.25em 1em;
+}
+
 .inset-img img {
   margin: 0;
 }
