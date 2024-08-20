@@ -243,6 +243,22 @@ div.box {
   margin-bottom: 0.25em;
 }
 
+.aside {
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 0.5em;
+  padding: 1em;
+  margin-bottom: 1.2em;
+}
+
+.aside :first-child {
+  margin-top: 0;
+}
+
+.aside :last-child {
+  margin-bottom: 0;
+}
+
 ul.compact {
   margin: 0;
 }
