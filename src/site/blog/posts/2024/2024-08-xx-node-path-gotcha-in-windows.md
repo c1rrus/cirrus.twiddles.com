@@ -27,7 +27,7 @@ I recently ran across a gotcha when working with file paths in Node.js scripts a
 
 Imagine you have the following directory layout:
 
-```
+```txt
 ├── scripts/
 │   └── convert.js
 ├── assets/
