@@ -2,7 +2,7 @@
 title: Fixing a Node.js path gotcha on Windows
 slug: fixing-node-js-paths-on-windows
 date: 2024-08-20T23:23Z
-summary: How to implement robust, Windows-proof relative filepath handling in Node.js ES modules
+summary: How to implement robust, Windows-proof relative file path handling in Node.js ES modules
 keywords:
   - node
   - javascript
@@ -19,7 +19,7 @@ I recently ran across a gotcha when working with file paths in Node.js scripts a
 
 ## TL;DR
 
-**Problem**: When coverting file `URL` objects to absolute path strings, the [`pathname`](https://nodejs.org/api/url.html#urlpathname) part works fine on POSIX systems like macOS & Linux, but causes problems on Windows.
+**Problem**: When converting file `URL` objects to absolute path strings, the [`pathname`](https://nodejs.org/api/url.html#urlpathname) part works fine on POSIX systems like macOS & Linux, but causes problems on Windows.
 
 **Solution:** Use [`fileURLToPath()`](https://nodejs.org/api/url.html#urlfileurltopathurl-options) from `node:url`, to convert from URL to a path instead.
 
@@ -36,7 +36,7 @@ Imagine you have the following directory layout:
 └── output/
 ```
 
-...and you want `scripts/convert.mjs` to read `assets/file.abc`, do some kind of conversion of its contents and write the output to a new file under `output/`. Your `convert.mjs` is therefore reading from and writing to known locations relative to itself. You might therefore use relative filepaths when calling the relevant file system APIs:
+...and you want `scripts/convert.js` to read `assets/file.abc`, do some kind of conversion of its contents and write the output to a new file under `output/`. Your `convert.js` is therefore reading from and writing to known locations relative to itself. You might therefore use relative file paths when calling the relevant file system APIs:
 
 ```js
 const { readFile, writeFile } = require('fs/promises');
@@ -51,7 +51,7 @@ await writeFile('../output/file.xyz', content);
 However, Node's file system API [resolves relative file paths relative to the current working directory](https://nodejs.org/docs/v20.16.0/api/fs.html#string-paths). So, depending on _where_ you execute your script from, you'll get different results
 
 ```sh
-# fails, because it cannot find file "../assets/file.abc"
+# fails, because it cannot find the file "../assets/file.abc"
 # relative to the root directory you're currently in
 node scripts/convert.js
 
@@ -69,24 +69,24 @@ In the past, I used [`__dirname`](https://nodejs.org/docs/latest/api/modules.htm
 const { readFile, writeFile } = require('fs/promises');
 const { join } = require('path');
 
-const inputFilepath = join(__dirname, '..', 'assets', 'file.abc');
+const inputFilePath = join(__dirname, '..', 'assets', 'file.abc');
 
-const content = await readFile(inputFilepath);
+const content = await readFile(inputFilePath);
 
 // ...
 ```
 
 Problem solved!
 
-Now, if my colleague Alice runs this on her Mac, it works. `inputFilepath` will be set to something like `/Users/alice/assets/file.abc`, and the `readFile()` call successfully finds the file there.
+Now, if my colleague Alice runs this on her Mac, it works. `inputFilePath` will be set to something like `/Users/alice/assets/file.abc`, and the `readFile()` call successfully finds the file there.
 
-When my other colleague Bob runs this on his Linux box, it also works. In his case, `inputFilepath` ends up being set to `/home/bob/assets/file.abc`.
+When my other colleague Bob runs this on his Linux box, it also works. In his case, `inputFilePath` ends up being set to `/home/bob/assets/file.abc`.
 
 So far so good.
 
 However, it's now 2024 and CommonJS modules are on their way out. Node.js has supported ES Modules for a while now (as long as you include `"type": "module"` in your `package.json`, or use the `.mjs` file extension), so let's migrate our script to that format.
 
-Unfortunately, `__dirname` is not available within ES Modules. Intead, we can use [`import.meta.url`](https://nodejs.org/api/esm.html#importmetaurl), which gives us the absolute path of the current module as a `file://` URL. We just need to convert that URL to a directory path.
+Unfortunately, `__dirname` is not available within ES Modules. Instead, we can use [`import.meta.url`](https://nodejs.org/api/esm.html#importmetaurl), which gives us the absolute path of the current module as a `file://` URL. We just need to convert that URL to a directory path.
 
 ```js
 import { readFile, writeFile } from 'node:fs/promises';
@@ -100,9 +100,9 @@ import { join } from 'node:path';
 const ownDirUrl = new URL('.', import.meta.url); // URL object for file:///home/bob/scripts/
 const ownDirPath = ownDirUrl.pathname; // "home/bob/scripts/"
 
-const inputFilepath = join(ownDirPath, '..', 'assets', 'file.abc');
+const inputFilePath = join(ownDirPath, '..', 'assets', 'file.abc');
 
-const content = await readFile(inputFilepath);
+const content = await readFile(inputFilePath);
 
 // ...
 ```
@@ -171,14 +171,14 @@ import { fileURLToPath } from 'node:url';
 const ownDirUrl = new URL('.', import.meta.url);
 const ownDirPath = fileURLToPath(ownDirUrl); // <-- Safe to use on all OSes
 
-const inputFilepath = join(ownDirPath, '..', 'assets', 'file.abc');
+const inputFilePath = join(ownDirPath, '..', 'assets', 'file.abc');
 
-const content = await readFile(inputFilepath);
+const content = await readFile(inputFilePath);
 
 // ...
 ```
 
-...and finally it works reliably everywhere!
+...and finally, it works reliably everywhere!
 
 ## Recap
 
