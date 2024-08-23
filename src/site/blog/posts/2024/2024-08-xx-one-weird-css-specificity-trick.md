@@ -11,7 +11,10 @@ keywords:
 ogp:
   image: /media/2024/one-weird-css-trick.jpg
 ---
+<figure>
 <img src="/media/2024/one-weird-css-trick.jpg" alt="Medium shot of a surprised woman standing in front of endless CSS code." width="2000" height="776">
+<figcaption>Photo credit: "<a href="https://www.pexels.com/photo/portrait-photo-of-shocked-woman-in-blue-t-shirt-standing-in-front-of-white-background-3768905/">Portrait Photo of Shocked Woman</a>" by Andrea Piacquadio.</figcaption>
+</figure>
 
 In an ideal world, our CSS code is beautifully organised and easy to maintain. Reality is often quite different though. Of course, _your_ CSS code is perfect. But, other people's pesky CSS is often also present and might be conflicting with yours or is applying styles you don't want.
 
@@ -64,7 +67,11 @@ These approaches might make your code brittle though. What happens if the `.pare
 
 ## One weird trick
 
-When browsers calculate the specificity of a CSS selector, they're essentially counting how many ID, class, element or equivalent selectors you've combined. It turns out they do _not_ de-duplicate the selectors when doing so. Therefore, you can simply duplicate (or triplicate, or quadruple, etc.) the _same_ selector:
+When browsers calculate the specificity of a CSS selector, they're essentially counting how many ID, class, element or equivalent selectors you've combined. It turns out that you're allowed to repeat the same selector multiple times and each instance will add to the specificity. The [CSS Selectors Level 4 specification](https://www.w3.org/TR/selectors-4/#specificity-rules) says:
+
+> Repeated occurrences of the same simple selector are allowed and do increase specificity.
+
+Therefore, you can simply duplicate (or triplicate, or quadruple, etc.) the _same_ selector:
 
 ```css
 /* Double .checkbox__icon counts double! Specificity is now (0,4,0) */
