@@ -208,7 +208,8 @@ div.box {
   margin: 0 auto 1em;
 }
 
-.post figure img {
+.post figure img,
+.post figure .video-embed {
   margin-bottom: 0.5em;
 }
 
