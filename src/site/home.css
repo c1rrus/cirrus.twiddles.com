@@ -54,6 +54,10 @@
 	background: url('mastodon.png') no-repeat 2px 2px;
 }
 
+#bluesky {
+	background: url('bluesky.png') no-repeat 2px 2px;
+}
+
 #badges {
 	list-style-type: none;
 }
