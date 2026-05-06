@@ -7,3 +7,11 @@
 [[redirects]]
   from = "/blog/2021/07/15/a-@font-face-anti-pattern/"
   to = "/blog/2021/07/15/font-face-anti-pattern/"
+
+# Allow browsers to access RSS/Atom feeds directly
+# See: https://www.blogsareback.com/guides/enable-cors
+[[headers]]
+  for = "/feed.*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Methods = "GET, HEAD, OPTIONS"
